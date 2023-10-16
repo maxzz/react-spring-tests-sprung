@@ -3,7 +3,7 @@ import { AnimatedBox, AnimatedCircle, AnimationContainter, BoxContainer, Explana
 import { ExampleProps } from './common';
 
 export function Example2({ trail, trailRef, elements, firstAnimationTriggered, setFirstAnimationTriggered, setSecondAnimationTriggered }: ExampleProps) {
-    //Make a reference for our transition, we'll recieve a trailRef from our main function to chain together
+    // Make a reference for our transition, we'll recieve a trailRef from our main function to chain together
     const transitionRef = useSpringRef();
     const transition = useTransition(firstAnimationTriggered, {
         ref: transitionRef,
@@ -12,14 +12,12 @@ export function Example2({ trail, trailRef, elements, firstAnimationTriggered, s
         leave: { opacity: 0, y: '-100%' }
     });
 
-    /*
-      If we want a spring or trail to follow a transition, without a trigger, we can re-write our
-      our trail and spring config with 'to' and 'from'. Then we can supply our useChain a second argument
-      with a timestamp/delay for each spring as an array.
-  
-      EX: useChain([transitionRef, trailRef], [0, 1])
-          - Where the transition will immediately run when triggered, and the trail will run after a delay of 1 second
-    */
+    // If we want a spring or trail to follow a transition, without a trigger, we can re-write our
+    // our trail and spring config with 'to' and 'from'. Then we can supply our useChain a second argument
+    // with a timestamp/delay for each spring as an array.
+
+    // EX: useChain([transitionRef, trailRef], [0, 1])
+    //     - Where the transition will immediately run when triggered, and the trail will run after a delay of 1 second
     useChain([transitionRef, trailRef]);
 
     return (

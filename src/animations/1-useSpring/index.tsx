@@ -20,11 +20,13 @@ export function PageUseSpring() {
                     an event
                 </span>
             </div>
+
             <AnimationContainter>
                 <Example1 />
                 <Example2 />
                 <Example3 />
             </AnimationContainter>
+            
         </BoxContainer>
     </>);
 }

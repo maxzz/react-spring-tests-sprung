@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { config, useTrail, useTransition } from '@react-spring/web';
 import { AnimatedBox, AnimationContainter, BoxContainer, HookExplanation, ToggleButton } from '../../styles/styles';
 
-//----------------------------------------------Staggered spring animations using useTrail----------------------------------------------\\
+// Staggered spring animations using useTrail
+
 export function Example2() {
     const [isActive, setIsActive] = useState(false);
 
-    //Here is a second example to show how we can use the useTrail hook for slighty incorrect quotes by dead philosophers
+    // Here is a second example to show how we can use the useTrail hook for slighty incorrect quotes by dead philosophers
     const message = [
         { id: 1, side1: 'On', side2: 'a' },
         { id: 2, side1: 'the', side2: 'man' },
@@ -25,6 +26,7 @@ export function Example2() {
     return (
         <BoxContainer>
             <h1>useTrail automatically staggers animations for us</h1>
+
             <AnimationContainter>
                 {trail2.map((transition, i) => (
                     <AnimatedBox style={transition}>
@@ -32,9 +34,11 @@ export function Example2() {
                     </AnimatedBox>
                 ))}
             </AnimationContainter>
+
             <ToggleButton onClick={() => setIsActive((state) => !state)}>
                 Click to fire
             </ToggleButton>
+
         </BoxContainer>
     );
 }

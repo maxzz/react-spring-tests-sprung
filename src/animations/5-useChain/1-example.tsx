@@ -3,14 +3,14 @@ import { AnimatedBox, AnimatedCircle, AnimationContainter, BoxContainer, Explana
 import { ExampleProps } from './common';
 
 export function Example1({ trail, trailRef, elements, firstAnimationTriggered, setFirstAnimationTriggered, setSecondAnimationTriggered }: ExampleProps) {
-    //Make a reference for our spring, we'll recieve a trailRef from our main function to chain together
+    // Make a reference for our spring, we'll recieve a trailRef from our main function to chain together
     const springRef = useSpringRef();
     const spring = useSpring({
         ref: springRef,
         opacity: firstAnimationTriggered ? 1 : 0
     });
 
-    //Our useChain hook takes an array of references of our defined animations
+    // Our useChain hook takes an array of references of our defined animations
     useChain([springRef, trailRef]); //For our first example
     return (
         <BoxContainer>
@@ -22,6 +22,7 @@ export function Example1({ trail, trailRef, elements, firstAnimationTriggered, s
                 fired yet, remember useSpring does not unmount our element from the dom
                 it is always there
             </Explanation>
+
             <AnimationContainter>
                 <AnimatedBox
                     className="clickable chain"
@@ -29,18 +30,17 @@ export function Example1({ trail, trailRef, elements, firstAnimationTriggered, s
                     onClick={() => setSecondAnimationTriggered((state) => !state)}
                 >
                     {/*
-            -- DO NOT UNCOMMENT --
-
-            Now that our first animation is complete lets trigger our circles.
-            We've declared that our trail will map 4 circles (the length of our dataset).
-            Each time it will render an animated circle, but we want them to be spread evenly,
-            so we'll add a second transformation to shift each circle by the defined offset value we
-            gave it above along with the base transition.
-
-            -- DO NOT UNCOMMENT --
-            */}
+                    -- DO NOT UNCOMMENT --
+                    Now that our first animation is complete lets trigger our circles.
+                    We've declared that our trail will map 4 circles (the length of our dataset).
+                    Each time it will render an animated circle, but we want them to be spread evenly,
+                    so we'll add a second transformation to shift each circle by the defined offset value we
+                    gave it above along with the base transition.
+                    -- DO NOT UNCOMMENT --
+                    */}
 
                     <h2>Trigger 2nd animation</h2>
+
                     {trail.map((animation, i) => (
                         <AnimatedCircle
                             style={{
@@ -52,6 +52,7 @@ export function Example1({ trail, trailRef, elements, firstAnimationTriggered, s
                         </AnimatedCircle>
                     ))}
                 </AnimatedBox>
+
             </AnimationContainter>
 
             <ToggleButton onClick={() => setFirstAnimationTriggered((state) => !state)}>

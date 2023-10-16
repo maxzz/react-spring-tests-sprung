@@ -3,10 +3,11 @@ import { useSpring, useSprings } from '@react-spring/web';
 import { AnimatedBox, AnimationContainter, BoxContainer, Explanation, ToggleButton } from '../../styles/styles';
 import { CommonExplanation, elements } from './common';
 
-//----------------------------------------------useSprings elements have base animation, but with variation between each----------------------------------------------\\
+// useSprings elements have base animation, but with variation between each
+
 export function Example3() {
     const [isActive, setIsActive] = useState(false);
-    //
+
     const baseAnimation = useSpring({
         opacity: isActive ? 1 : 0,
         transform: isActive ? 'translateY(0%)' : 'translateY(100%)'
@@ -38,6 +39,7 @@ export function Example3() {
                 animation and we'll apply extra configs to each box when we map over
                 each item. Toggle the state to run the animation.
             </Explanation>
+
             <AnimationContainter>
                 {spring4.map((spring, i) => (
                     <AnimatedBox style={{ ...spring, ...extra[i] }} key={i}>
@@ -49,6 +51,7 @@ export function Example3() {
             <ToggleButton onClick={() => setIsActive((state) => !state)}>
                 Click to change state
             </ToggleButton>
+            
         </BoxContainer>
     </>);
 }
