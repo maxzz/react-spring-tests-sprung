@@ -17,12 +17,14 @@ export const MainContainer = styled('section', {
 
 export function App() { // Uncomment to see examples
     return (
-        <MainContainer>
-            <PageUseSpring />
-            <PageUseSprings />
-            <PageUseTransition />
-            <PageUseTrail />
-            <PageUseChain />
-        </MainContainer>
+        <div className="bg-slate-600">
+            <MainContainer>
+                <PageUseSpring />
+                <PageUseSprings />
+                <PageUseTransition />
+                <PageUseTrail />
+                <PageUseChain />
+            </MainContainer>
+        </div>
     );
 }
