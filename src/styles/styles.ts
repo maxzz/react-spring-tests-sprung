@@ -67,7 +67,7 @@ export const AnimatedCircle = styled(animated.div, {
 });
 
 export const HookExplanation = styled('p', {
-    fontSize: '2rem',
+    fontSize: '.7rem',
     color: 'white',
     // width: '30rem',
     // margin: '0rem',

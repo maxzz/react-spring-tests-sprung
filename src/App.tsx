@@ -1,12 +1,13 @@
+import { PageUseSpring } from './animations/1-useSpring';
+import { PageUseSprings } from './animations/2-useSprings';
+import { PageUseTransition } from './animations/3-useTransition';
+import { PageUseTrail } from './animations/4-useTrail';
+import { PageUseChain } from './animations/5-useChain';
 import { styled } from '@stitches/react';
-import UseSpring from './animations/1-useSpring';
-import UseSprings from './animations/2-useSprings';
-import UseTransition from './animations/3-useTransition';
-import UseTrail from './animations/4-useTrail';
-import UseChain from './animations/5-useChain';
 
 export const MainContainer = styled('section', {
-    margin: '3rem',
+    margin: '3rem auto',
+    maxWidth: '40vw',
     minHeight: '100%',
     minWidth: 0,
     display: 'flex',
@@ -17,11 +18,11 @@ export const MainContainer = styled('section', {
 export function App() { // Uncomment to see examples
     return (
         <MainContainer>
-            <UseSpring />
-            <UseSprings />
-            <UseTransition />
-            <UseTrail />
-            <UseChain />
+            <PageUseSpring />
+            <PageUseSprings />
+            <PageUseTransition />
+            <PageUseTrail />
+            <PageUseChain />
         </MainContainer>
     );
 }
