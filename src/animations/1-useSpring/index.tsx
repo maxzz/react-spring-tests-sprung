@@ -1,13 +1,6 @@
 import React, { useState } from 'react';
 import { useSpring } from 'react-spring';
-import {
-    HookExplanation,
-    BoxContainer,
-    AnimatedBox,
-    ToggleButton,
-    AnimationContainter,
-    Explanation
-} from '../../styles/styles';
+import { HookExplanation, BoxContainer, AnimatedBox, ToggleButton, AnimationContainter, Explanation } from '../../styles/styles';
 
 //----------------------------------------------State-less and event-less animation----------------------------------------------\\
 const Example1 = () => {
@@ -43,14 +36,9 @@ const Example2 = () => {
     });
 
     return (
-        <>
-            <AnimatedBox
-                style={animation2}
-                onClick={() => setIsActive((state) => !state)}
-            >
-                {isActive ? 'Click Me!' : 'Square!'}
-            </AnimatedBox>
-        </>
+        <AnimatedBox style={animation2} onClick={() => setIsActive((state) => !state)}>
+            {isActive ? 'Click Me!' : 'Square!'}
+        </AnimatedBox>
     );
 };
 
@@ -63,49 +51,57 @@ const Example3 = () => {
 
     //We must first define the starting point for the api object
     const [animation3, api] = useSpring(() => ({
-        from: { backgroundColor: 'rgb(255, 255, 255)', color: 'rgb(0, 0, 0)' }
+        from: {
+            backgroundColor: 'rgb(255, 255, 255)',
+            color: 'rgb(0, 0, 0)',
+        }
     }));
 
     //Define like usual an event handler, and voila!
     const fireAnimation = () => {
         api.start({
-            from: { backgroundColor: 'rgb(255, 255, 255)', color: 'rgb(0, 0, 0)' },
-            to: { backgroundColor: '#FF7518', color: 'rgb(255, 255, 255)' }
+            from: {
+                backgroundColor: 'rgb(255, 255, 255)',
+                color: 'rgb(0, 0, 0)',
+            },
+            to: {
+                backgroundColor: '#FF7518',
+                color: 'rgb(255, 255, 255)',
+            }
         });
     };
 
     return (
-        <AnimatedBox
-            style={animation3}
-            onClick={fireAnimation}
-            className="clickable"
-        >
+        <AnimatedBox style={animation3} onClick={fireAnimation} className="clickable">
             <p>Onclick event</p>
         </AnimatedBox>
     );
 };
 
 const UseSpring: React.FC = () => {
-    return (
-        <>
-            <HookExplanation>
-                We use useSpring when we want to animate an element from state/position
-                A to state/position B
-            </HookExplanation>
-            <BoxContainer>
+    return (<>
+        <HookExplanation>
+            1. useSpring
+        </HookExplanation>
+        <BoxContainer>
+            <div className="">
                 <h1>How we can trigger a useSpring animation</h1>
+                <div className="hook-explanation">
+                    We use useSpring when we want to animate an element from state/position
+                    A to state/position B
+                </div>
                 <span>
                     Animates on page load | Animates based on boolean value | Animates via
                     an event
                 </span>
-                <AnimationContainter>
-                    <Example1 />
-                    <Example2 />
-                    <Example3 />
-                </AnimationContainter>
-            </BoxContainer>
-        </>
-    );
+            </div>
+            <AnimationContainter>
+                <Example1 />
+                <Example2 />
+                <Example3 />
+            </AnimationContainter>
+        </BoxContainer>
+    </>);
 };
 
 export default UseSpring;

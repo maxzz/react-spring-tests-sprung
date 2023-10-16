@@ -1,22 +1,6 @@
 import React, { useState } from 'react';
-import {
-    useTrail,
-    useTransition,
-    useSpring,
-    useSpringRef,
-    useChain,
-    SpringValue,
-    SpringRef
-} from '@react-spring/web';
-import {
-    AnimatedBox,
-    AnimatedCircle,
-    AnimationContainter,
-    BoxContainer,
-    Explanation,
-    HookExplanation,
-    ToggleButton
-} from '../../styles/styles';
+import { useTrail, useTransition, useSpring, useSpringRef, useChain, SpringValue, SpringRef } from '@react-spring/web';
+import { AnimatedBox, AnimatedCircle, AnimationContainter, BoxContainer, Explanation, HookExplanation, ToggleButton } from '../../styles/styles';
 
 interface ExampleProps {
     trail: {
@@ -67,15 +51,17 @@ const Example1: React.FC<ExampleProps> = ({
                     style={spring}
                     onClick={() => setSecondAnimationTriggered((state) => !state)}
                 >
-                    {/* -- DO NOT UNCOMMENT --
+                    {/* 
+                    -- DO NOT UNCOMMENT --
 
-            Now that our first animation is complete lets trigger our circles.
-            We've declared that our trail will map 4 circles (the length of our dataset).
-            Each time it will render an animated circle, but we want them to be spread evenly,
-            so we'll add a second transformation to shift each circle by the defined offset value we 
-            gave it above along with the base transition. 
+                    Now that our first animation is complete lets trigger our circles.
+                    We've declared that our trail will map 4 circles (the length of our dataset).
+                    Each time it will render an animated circle, but we want them to be spread evenly,
+                    so we'll add a second transformation to shift each circle by the defined offset value we 
+                    gave it above along with the base transition. 
 
-            -- DO NOT UNCOMMENT -- */}
+                    -- DO NOT UNCOMMENT -- 
+                    */}
 
                     <h2>Trigger 2nd animation</h2>
                     {trail.map((animation, i) => (
@@ -90,11 +76,11 @@ const Example1: React.FC<ExampleProps> = ({
                     ))}
                 </AnimatedBox>
             </AnimationContainter>
-            <ToggleButton
-                onClick={() => setFirstAnimationTriggered((state) => !state)}
-            >
+
+            <ToggleButton onClick={() => setFirstAnimationTriggered((state) => !state)}>
                 Trigger 1st animation
             </ToggleButton>
+
         </BoxContainer>
     );
 };
@@ -134,6 +120,7 @@ const Example2: React.FC<ExampleProps> = ({
                 That box will be able to trigger our second animation which is the same
                 useTrail as in example 1.
             </Explanation>
+
             <AnimationContainter>
                 {transition(
                     (spring, item) =>
@@ -145,12 +132,7 @@ const Example2: React.FC<ExampleProps> = ({
                             >
                                 <h2>Trigger 2nd animation</h2>
                                 {trail.map((animation, i) => (
-                                    <AnimatedCircle
-                                        style={{
-                                            x: `${elements[i].offset}`,
-                                            ...animation
-                                        }}
-                                    >
+                                    <AnimatedCircle style={{ x: `${elements[i].offset}`, ...animation }}>
                                         <span style={{ fontSize: '3rem' }}>
                                             {elements[i].message}
                                         </span>
@@ -160,11 +142,11 @@ const Example2: React.FC<ExampleProps> = ({
                         )
                 )}
             </AnimationContainter>
-            <ToggleButton
-                onClick={() => setFirstAnimationTriggered((state) => !state)}
-            >
+
+            <ToggleButton onClick={() => setFirstAnimationTriggered((state) => !state)}>
                 Trigger 1st animation
             </ToggleButton>
+
         </BoxContainer>
     );
 };
@@ -173,8 +155,7 @@ const UseChain = () => {
     //----------------------------------------------Chaining animations based on state----------------------------------------------\\
     //First we need to declare a trigger for each animation
     const [firstAnimationTriggered, setFirstAnimationTriggered] = useState(false);
-    const [secondAnimationTriggered, setSecondAnimationTriggered] =
-        useState(false);
+    const [secondAnimationTriggered, setSecondAnimationTriggered] = useState(false);
 
     /*
       Our second animation will be a useTrail to animate 4 circles
@@ -194,9 +175,7 @@ const UseChain = () => {
     const trail = useTrail(elements.length, {
         ref: trailRef,
         opacity: secondAnimationTriggered ? 1 : 0,
-        transform: secondAnimationTriggered
-            ? 'translateX(-150%)'
-            : 'translateX(150%)'
+        transform: secondAnimationTriggered ? 'translateX(-150%)' : 'translateX(150%)',
     });
 
     return (
@@ -205,14 +184,16 @@ const UseChain = () => {
                 To use useChain we just need to configure 2 spring animations and attach
                 a ref to each, and pass those refs to useChain in an array
             </HookExplanation>
-            {/* <Example1
-        elements={elements}
-        trail={trail}
-        trailRef={trailRef}
-        firstAnimationTriggered={firstAnimationTriggered}
-        setFirstAnimationTriggered={setFirstAnimationTriggered}
-        setSecondAnimationTriggered={setSecondAnimationTriggered}
-      /> */}
+            {/* 
+            <Example1
+                elements={elements}
+                trail={trail}
+                trailRef={trailRef}
+                firstAnimationTriggered={firstAnimationTriggered}
+                setFirstAnimationTriggered={setFirstAnimationTriggered}
+                setSecondAnimationTriggered={setSecondAnimationTriggered}
+            /> 
+            */}
             <Example2
                 elements={elements}
                 trail={trail}

@@ -1,19 +1,20 @@
 import { styled } from '@stitches/react';
-import UseSpring from './animations/useSpring/UseSpring';
-import UseSprings from './animations/useSprings/UseSprings';
-import UseTransition from './animations/useTransition/UseTransition';
-import UseTrail from './animations/useTrail/UseTrail';
-import UseChain from './animations/useChain/UseChain';
+import UseSpring from './animations/1-useSpring';
+import UseSprings from './animations/2-useSprings';
+import UseTransition from './animations/3-useTransition';
+import UseTrail from './animations/4-useTrail';
+import UseChain from './animations/5-useChain';
 
 export const MainContainer = styled('section', {
-    padding: '3rem',
+    margin: '3rem',
     minHeight: '100%',
+    minWidth: 0,
     display: 'flex',
     flexDirection: 'column',
     rowGap: '3rem',
 });
 
-function App() { // Uncomment to see examples
+export function App() { // Uncomment to see examples
     return (
         <MainContainer>
             <UseSpring />
@@ -24,5 +25,3 @@ function App() { // Uncomment to see examples
         </MainContainer>
     );
 }
-
-export default App;
