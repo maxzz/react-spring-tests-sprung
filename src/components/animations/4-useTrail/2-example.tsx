@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { config, useTrail, useTransition } from '@react-spring/web';
-import { AnimatedBox, AnimationContainter, BoxContainer, HookExplanation, ToggleButton } from '../../styles/styles';
+import { AnimatedBox, AnimationContainter, BoxContainer, HookExplanation, ToggleButton } from '../../../styles/styles';
 
 // Staggered spring animations using useTrail
 

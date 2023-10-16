@@ -1,5 +1,5 @@
 import { useTransition, useSpringRef, useChain } from '@react-spring/web';
-import { AnimatedBox, AnimatedCircle, AnimationContainter, BoxContainer, Explanation, ToggleButton } from '../../styles/styles';
+import { AnimatedBox, AnimatedCircle, AnimationContainter, BoxContainer, Explanation, ToggleButton } from '../../../styles/styles';
 import { ExampleProps } from './common';
 
 export function Example2({ trail, trailRef, elements, firstAnimationTriggered, setFirstAnimationTriggered, setSecondAnimationTriggered }: ExampleProps) {
@@ -39,7 +39,7 @@ export function Example2({ trail, trailRef, elements, firstAnimationTriggered, s
                         >
                             <h2>Trigger 2nd animation</h2>
                             {trail.map((animation, i) => (
-                                <AnimatedCircle style={{ x: `${elements[i].offset}`, ...animation }}>
+                                <AnimatedCircle style={{ x: `${elements[i].offset}`, ...animation }} key={i}>
                                     <span style={{ fontSize: '3rem' }}>
                                         {elements[i].message}
                                     </span>

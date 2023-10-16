@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTrail, useSpringRef } from '@react-spring/web';
-import { HookExplanation } from '../../styles/styles';
+import { HookExplanation } from '../../../styles/styles';
 import { Example1 } from './1-example';
 import { Example2 } from './2-example';
 
@@ -38,6 +38,7 @@ export function PageUseChain() {
             To use useChain we just need to configure 2 spring animations and attach
             a ref to each, and pass those refs to useChain in an array
         </HookExplanation>
+
         {/*
             <Example1
                 elements={elements}
@@ -48,12 +49,14 @@ export function PageUseChain() {
                 setSecondAnimationTriggered={setSecondAnimationTriggered}
             />
         */}
+
         <Example2
             elements={elements}
             trail={trail}
             trailRef={trailRef}
             firstAnimationTriggered={firstAnimationTriggered}
             setFirstAnimationTriggered={setFirstAnimationTriggered}
-            setSecondAnimationTriggered={setSecondAnimationTriggered} />
+            setSecondAnimationTriggered={setSecondAnimationTriggered}
+        />
     </>);
 }

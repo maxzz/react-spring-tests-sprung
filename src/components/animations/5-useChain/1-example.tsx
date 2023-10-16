@@ -1,5 +1,5 @@
 import { useSpring, useSpringRef, useChain } from '@react-spring/web';
-import { AnimatedBox, AnimatedCircle, AnimationContainter, BoxContainer, Explanation, ToggleButton } from '../../styles/styles';
+import { AnimatedBox, AnimatedCircle, AnimationContainter, BoxContainer, Explanation, ToggleButton } from '../../../styles/styles';
 import { ExampleProps } from './common';
 
 export function Example1({ trail, trailRef, elements, firstAnimationTriggered, setFirstAnimationTriggered, setSecondAnimationTriggered }: ExampleProps) {

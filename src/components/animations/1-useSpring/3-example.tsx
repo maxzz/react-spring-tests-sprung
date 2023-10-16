@@ -1,5 +1,5 @@
 import { useSpring } from 'react-spring';
-import { AnimatedBox } from '../../styles/styles';
+import { AnimatedBox } from '../../../styles/styles';
 
 // Animation on an event without state
 
@@ -20,7 +20,7 @@ export function Example3() {
     const fireAnimation = () => {
         api.start({
             from: { backgroundColor: colorWhite, color: colorBlack, },
-            to: { backgroundColor: colorOrange, color: colorWhite, }
+            to: { backgroundColor: colorOrange, color: colorWhite, },
         });
     };
 

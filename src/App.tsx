@@ -1,30 +1,17 @@
-import { PageUseSpring } from './animations/1-useSpring';
-import { PageUseSprings } from './animations/2-useSprings';
-import { PageUseTransition } from './animations/3-useTransition';
-import { PageUseTrail } from './animations/4-useTrail';
-import { PageUseChain } from './animations/5-useChain';
-import { styled } from '@stitches/react';
-
-export const MainContainer = styled('section', {
-    margin: '3rem auto',
-    maxWidth: '40vw',
-    minHeight: '100%',
-    minWidth: 0,
-    display: 'flex',
-    flexDirection: 'column',
-    rowGap: '3rem',
-});
+import { PageUseSpring } from './components/animations/1-useSpring';
+import { PageUseSprings } from './components/animations/2-useSprings';
+import { PageUseTransition } from './components/animations/3-useTransition';
+import { PageUseTrail } from './components/animations/4-useTrail';
+import { PageUseChain } from './components/animations/5-useChain';
 
 export function App() { // Uncomment to see examples
     return (
-        <div className="bg-slate-600">
-            <MainContainer>
-                <PageUseSpring />
-                <PageUseSprings />
-                <PageUseTransition />
-                <PageUseTrail />
-                <PageUseChain />
-            </MainContainer>
+        <div className="mx-auto px-12 max-w-sm md:max-w-5xl bg-gray-500">
+            <PageUseSpring />
+            <PageUseSprings />
+            <PageUseTransition />
+            <PageUseTrail />
+            <PageUseChain />
         </div>
     );
 }

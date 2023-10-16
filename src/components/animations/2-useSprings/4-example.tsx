@@ -1,5 +1,5 @@
 import { useSprings } from '@react-spring/web';
-import { AnimatedBox, AnimationContainter, BoxContainer, Explanation, ToggleButton } from '../../styles/styles';
+import { AnimatedBox, AnimationContainter, BoxContainer, Explanation, ToggleButton } from '../../../styles/styles';
 import { CommonExplanation, elements } from './common';
 
 // Event animation

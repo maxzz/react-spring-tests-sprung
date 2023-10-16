@@ -1,5 +1,5 @@
 import { useSpring } from 'react-spring';
-import { AnimatedBox } from '../../styles/styles';
+import { AnimatedBox } from '../../../styles/styles';
 
 // State-less and event-less animation
 

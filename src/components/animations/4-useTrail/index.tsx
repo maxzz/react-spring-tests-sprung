@@ -1,4 +1,4 @@
-import { HookExplanation } from '../../styles/styles';
+import { HookExplanation } from '../../../styles/styles';
 import { Example1 } from './1-example';
 import { Example2 } from './2-example';
 

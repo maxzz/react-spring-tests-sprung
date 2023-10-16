@@ -1,4 +1,4 @@
-import { HookExplanation, BoxContainer, AnimationContainter } from '../../styles/styles';
+import { HookExplanation, BoxContainer, AnimationContainter } from '../../../styles/styles';
 import { Example1 } from './1-example';
 import { Example2 } from './2-example';
 import { Example3 } from './3-example';
