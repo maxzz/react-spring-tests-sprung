@@ -35,8 +35,8 @@ export function Example1() {
             </div>
 
             <NewContainerAnimation>
-                {elements.map((element) => (
-                    <AnimatedBox style={springs1}>
+                {elements.map((element, i) => (
+                    <AnimatedBox style={springs1} key={i}>
                         <h1>item {element}</h1>
                     </AnimatedBox>
                 ))}

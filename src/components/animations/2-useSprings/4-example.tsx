@@ -33,7 +33,7 @@ export function Example4() {
 
             <NewContainerAnimation>
                 {springs3.map((spring, i) => (
-                    <AnimatedBox style={spring}>
+                    <AnimatedBox style={spring} key={i}>
                         <h1>item {i}</h1>
                     </AnimatedBox>
                 ))}

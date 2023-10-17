@@ -22,6 +22,8 @@ export const AnimatedBox = styled(animated.div, {
         textAlign: 'center'
     },
 
+    pointerEvents: 'none',
+
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -38,6 +40,8 @@ export const AnimatedCircle = styled(animated.div, {
     borderRadius: '50% 50%',
     backgroundColor: '#FF7518',
     color: 'white',
+
+    pointerEvents: 'none',
 
     display: 'flex',
     alignItems: 'center',
