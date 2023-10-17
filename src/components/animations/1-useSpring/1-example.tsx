@@ -1,5 +1,5 @@
 import { useSpring } from 'react-spring';
-import { AnimatedBox } from '@/components/ui/animated';
+import { DemoAnimatableBox } from '@/components/ui/animated';
 
 // State-less and event-less animation
 
@@ -12,8 +12,8 @@ export function Example1() {
     });
 
     return (
-        <AnimatedBox style={animation1}>
+        <DemoAnimatableBox style={animation1}>
             <p>State-less & no event</p>
-        </AnimatedBox>
+        </DemoAnimatableBox>
     );
 }

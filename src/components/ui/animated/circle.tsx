@@ -1,7 +1,7 @@
 import { styled } from '@stitches/react';
 import { animated, CSS } from 'react-spring';
 
-export const AnimatedCircle = styled(animated.div, {
+export const DemoAnimatableCircle = styled(animated.div, {
     alignSelf: 'center',
 
     position: 'absolute',

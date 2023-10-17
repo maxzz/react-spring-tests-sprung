@@ -1,5 +1,5 @@
 import { useTransition, useSpringRef, useChain } from '@react-spring/web';
-import { AnimatedBox, AnimatedCircle } from '@/components/ui/animated';
+import { DemoAnimatableBox, DemoAnimatableCircle } from '@/components/ui/animated';
 import { NewContainerForAnimation, NewContainerBox, NewExplanation, NewNotes, StartButton } from '@/components/ui';
 import { ExampleProps } from './common';
 
@@ -39,19 +39,19 @@ export function Example2({ trail, trailRef, elements, firstAnimationTriggered, s
                     {transition(
                         (spring, item) => item && (
                             <div className="cursor-pointer" onClick={() => setSecondAnimationTriggered((state) => !state)}>
-                                <AnimatedBox className="clickable chain" style={spring}>
+                                <DemoAnimatableBox className="clickable chain" style={spring}>
                                     <h2>
                                         Trigger 2nd animation
                                     </h2>
 
                                     {trail.map((animation, i) => (
-                                        <AnimatedCircle style={{ x: `${elements[i].offset}`, ...animation }} key={i}>
+                                        <DemoAnimatableCircle style={{ x: `${elements[i].offset}`, ...animation }} key={i}>
                                             <span style={{ fontSize: '1rem' }}>
                                                 {elements[i].message}
                                             </span>
-                                        </AnimatedCircle>
+                                        </DemoAnimatableCircle>
                                     ))}
-                                </AnimatedBox>
+                                </DemoAnimatableBox>
                             </div>
                         )
                     )}

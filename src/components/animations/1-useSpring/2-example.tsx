@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useSpring } from 'react-spring';
-import { AnimatedBox } from '@/components/ui/animated';
+import { DemoAnimatableBox } from '@/components/ui/animated';
 
 // Animation based on state
 
@@ -18,9 +18,9 @@ export function Example2() {
 
     return (
         <div className="cursor-pointer" onClick={() => setIsActive((state) => !state)}>
-            <AnimatedBox style={animation2} >
+            <DemoAnimatableBox style={animation2} >
                 {isActive ? 'Click Me!' : 'Square!'}
-            </AnimatedBox>
+            </DemoAnimatableBox>
         </div>
     );
 }

@@ -1,4 +1,4 @@
-import { AnimatedBox } from '@/components/ui/animated';
+import { DemoAnimatableBox } from '@/components/ui/animated';
 import { NewContainerForAnimation, NewContainerBox, NewNotes, StartButton } from '@/components/ui';
 import { ExampleProps } from './common';
 
@@ -27,9 +27,9 @@ export function Example2({ transition, setIsActive }: ExampleProps) {
                 {transition(
                     (spring, item) => item &&
                         elements.map((element) => (
-                            <AnimatedBox style={spring}>
+                            <DemoAnimatableBox style={spring}>
                                 <h1>{element.message}</h1>
-                            </AnimatedBox>
+                            </DemoAnimatableBox>
                         ))
                 )}
             </NewContainerForAnimation>

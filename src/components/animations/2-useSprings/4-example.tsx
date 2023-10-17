@@ -1,5 +1,5 @@
 import { useSprings } from '@react-spring/web';
-import { AnimatedBox } from '@/components/ui/animated';
+import { DemoAnimatableBox } from '@/components/ui/animated';
 import { NewContainerForAnimation, NewContainerBox, NewExplanation, NewNotes, StartButton } from '@/components/ui';
 import { CommonExplanation, elements } from './common';
 
@@ -35,9 +35,9 @@ export function Example4() {
 
             <NewContainerForAnimation>
                 {springs3.map((spring, i) => (
-                    <AnimatedBox style={spring} key={i}>
+                    <DemoAnimatableBox style={spring} key={i}>
                         <h1>item {i}</h1>
-                    </AnimatedBox>
+                    </DemoAnimatableBox>
                 ))}
             </NewContainerForAnimation>
 

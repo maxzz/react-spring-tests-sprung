@@ -1,7 +1,7 @@
 import { styled } from '@stitches/react';
 import { animated, CSS } from 'react-spring';
 
-export const AnimatedBox = styled(animated.div, {
+export const DemoAnimatableBox = styled(animated.div, {
     position: 'relative',
 
     padding: '.5rem',
@@ -9,9 +9,10 @@ export const AnimatedBox = styled(animated.div, {
     height: '3rem',
     fontSize: '.7rem',
 
+    borderRadius: '5px',
+    
     color: 'black',
     backgroundColor: 'rgb(255,255,255)',
-    borderRadius: '5px',
 
     '&.clickable': {
         cursor: 'pointer'

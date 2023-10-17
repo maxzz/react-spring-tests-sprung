@@ -1,5 +1,5 @@
 import { ExampleProps } from './common';
-import { AnimatedBox } from '@/components/ui/animated';
+import { DemoAnimatableBox } from '@/components/ui/animated';
 import { NewContainerForAnimation, NewContainerBox, NewNotes, StartButton } from '@/components/ui';
 
 // Single element mounting and unmounting
@@ -19,9 +19,9 @@ export function Example1({ transition, setIsActive }: ExampleProps) {
             <NewContainerForAnimation>
                 {transition(
                     (spring, item) => item && (
-                        <AnimatedBox style={spring}>
+                        <DemoAnimatableBox style={spring}>
                             <h1>Hey ho!</h1>
-                        </AnimatedBox>
+                        </DemoAnimatableBox>
                     )
                 )}
             </NewContainerForAnimation>

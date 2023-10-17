@@ -1,5 +1,5 @@
 import { useSpring } from 'react-spring';
-import { AnimatedBox } from '@/components/ui/animated';
+import { DemoAnimatableBox } from '@/components/ui/animated';
 
 // Animation on an event without state
 
@@ -25,9 +25,9 @@ export function Example3() {
 
     return (
         <div className="cursor-pointer" onClick={fireAnimation}>
-            <AnimatedBox style={animation3}>
+            <DemoAnimatableBox style={animation3}>
                 <p>Onclick event</p>
-            </AnimatedBox>
+            </DemoAnimatableBox>
         </div>
     );
 }

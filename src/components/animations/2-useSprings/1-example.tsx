@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useSpring } from '@react-spring/web';
-import { AnimatedBox } from '@/components/ui/animated';
+import { DemoAnimatableBox } from '@/components/ui/animated';
 import { CommonExplanation, elements } from './common';
 import { NewContainerForAnimation, NewContainerBox, NewNotes, StartButton } from '@/components/ui';
 
@@ -17,7 +17,7 @@ export function Example1() {
     // Then we'll trigger the animation via a button to toggle the state
     const springs1 = useSpring({
         transform: isActive ? 'rotate(720deg)' : 'rotate(0deg)',
-        borderRadius: isActive ? '50% 50%' : '0% 0%',
+        borderRadius: isActive ? '50% 50%' : '20% 20%',
         backgroundColor: isActive ? colorOrange : colorWhite,
         color: isActive ? colorWhite : colorBlack,
         transformOrigin: 'center'
@@ -37,9 +37,9 @@ export function Example1() {
         <NewContainerBox>
             <NewContainerForAnimation>
                 {elements.map((element, i) => (
-                    <AnimatedBox style={springs1} key={i}>
+                    <DemoAnimatableBox style={springs1} key={i}>
                         <h1>item {element}</h1>
-                    </AnimatedBox>
+                    </DemoAnimatableBox>
                 ))}
             </NewContainerForAnimation>
 

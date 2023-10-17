@@ -1,5 +1,5 @@
 import { useSpring, useSpringRef, useChain } from '@react-spring/web';
-import { AnimatedBox, AnimatedCircle } from '@/components/ui/animated';
+import { DemoAnimatableBox, DemoAnimatableCircle } from '@/components/ui/animated';
 import { NewAnimatedCircle, NewContainerForAnimation, NewContainerBox, NewExplanation, NewNotes, StartButton } from '@/components/ui';
 import { ExampleProps } from './common';
 
@@ -31,7 +31,7 @@ export function Example1({ trail, trailRef, elements, firstAnimationTriggered, s
 
             <NewContainerForAnimation>
                 <div className="cursor-pointer" onClick={() => setSecondAnimationTriggered((state) => !state)}>
-                    <AnimatedBox className="clickable chain" style={spring}>
+                    <DemoAnimatableBox className="clickable chain" style={spring}>
                         {/*
                         -- DO NOT UNCOMMENT --
                         Now that our first animation is complete lets trigger our circles.
@@ -46,13 +46,13 @@ export function Example1({ trail, trailRef, elements, firstAnimationTriggered, s
                         </h2>
 
                         {trail.map((animation, i) => (
-                            <AnimatedCircle style={{ x: `${elements[i].offset}`, ...animation }} key={i}>
+                            <DemoAnimatableCircle style={{ x: `${elements[i].offset}`, ...animation }} key={i}>
                                 <span style={{ fontSize: '1rem' }}>
                                     {elements[i].message}
                                 </span>
-                            </AnimatedCircle>
+                            </DemoAnimatableCircle>
                         ))}
-                    </AnimatedBox>
+                    </DemoAnimatableBox>
                 </div>
 
             </NewContainerForAnimation>
