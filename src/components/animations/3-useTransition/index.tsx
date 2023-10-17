@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { config, useTransition } from '@react-spring/web';
-import { HookExplanation } from '../../../styles/styles';
+import { NewHookExplanation } from '@/components/ui';
 import { Example1 } from './1-example';
 import { Example2 } from './2-example';
 
@@ -39,14 +39,14 @@ export function PageUseTransition() {
     });
 
     return (<>
-        <HookExplanation>
+        <NewHookExplanation>
             3. useTransition
-        </HookExplanation>
-        <HookExplanation>
+        </NewHookExplanation>
+        <NewHookExplanation>
             We the useTransition hook for mounting and unmounting an
             element/elements to the dom. As opposed to the useSpring where the
             elements are already on the dom tree and remain there after their spring
-        </HookExplanation>
+        </NewHookExplanation>
 
         <Example1 transition={transition} setIsActive={setIsActive} />
         {/* <Example2 transition={transition} setIsActive={setIsActive} /> */}

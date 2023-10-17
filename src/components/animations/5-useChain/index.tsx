@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTrail, useSpringRef } from '@react-spring/web';
-import { HookExplanation } from '../../../styles/styles';
+import { NewHookExplanation } from '@/components/ui';
 import { Example1 } from './1-example';
 import { Example2 } from './2-example';
 
@@ -31,13 +31,13 @@ export function PageUseChain() {
     });
 
     return (<>
-        <HookExplanation>
+        <NewHookExplanation>
             5. useChain
-        </HookExplanation>
-        <HookExplanation>
+        </NewHookExplanation>
+        <NewHookExplanation>
             To use useChain we just need to configure 2 spring animations and attach
             a ref to each, and pass those refs to useChain in an array
-        </HookExplanation>
+        </NewHookExplanation>
 
         {/*
             <Example1

@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { useSpring, useSprings } from '@react-spring/web';
-import { AnimationContainter, BoxContainer, Explanation } from '../../../styles/styles';
 import { AnimatedBox } from '@/components/ui/animated';
 import { CommonExplanation, elements } from './common';
-import { StartButton } from '@/components/ui';
+import { NewContainerAnimation, NewContainerBox, NewExplanation, StartButton } from '@/components/ui';
 
 // useSprings elements have base animation, but with variation between each
 
@@ -33,27 +32,27 @@ export function Example3() {
 
     return (<>
         <CommonExplanation />
-        <BoxContainer>
+        <NewContainerBox>
             <h1>useSprings state method</h1>
-            <Explanation>
+            <NewExplanation>
                 We'll map and render animated boxes given the length of our dataset (the
                 first argument of our useSprings hooks), except this time we have a base
                 animation and we'll apply extra configs to each box when we map over
                 each item. Toggle the state to run the animation.
-            </Explanation>
+            </NewExplanation>
 
-            <AnimationContainter>
+            <NewContainerAnimation>
                 {spring4.map((spring, i) => (
                     <AnimatedBox style={{ ...spring, ...extra[i] }} key={i}>
                         <h1>item {i}</h1>
                     </AnimatedBox>
                 ))}
-            </AnimationContainter>
+            </NewContainerAnimation>
 
             <StartButton onClick={() => setIsActive((state) => !state)}>
                 Click to change state
             </StartButton>
 
-        </BoxContainer>
+        </NewContainerBox>
     </>);
 }

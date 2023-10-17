@@ -1,8 +1,5 @@
-import React, { useState } from 'react';
-import { config, TransitionFn, useTransition } from '@react-spring/web';
-import { AnimationContainter, BoxContainer, HookExplanation } from '../../../styles/styles';
 import { AnimatedBox } from '@/components/ui/animated';
-import { StartButton } from '@/components/ui';
+import { NewContainerAnimation, NewContainerBox, StartButton } from '@/components/ui';
 import { ExampleProps } from './common';
 
 // Multiple elements mounting and unmounting
@@ -17,10 +14,10 @@ export function Example2({ transition, setIsActive }: ExampleProps) {
         { id: 4, message: 'T-Pain' }
     ];
     return (
-        <BoxContainer>
+        <NewContainerBox>
             <h1>useTransition, mounting and unmounting of multiple elements</h1>
 
-            <AnimationContainter>
+            <NewContainerAnimation>
                 {transition(
                     (spring, item) => item &&
                         elements.map((element) => (
@@ -29,12 +26,12 @@ export function Example2({ transition, setIsActive }: ExampleProps) {
                             </AnimatedBox>
                         ))
                 )}
-            </AnimationContainter>
+            </NewContainerAnimation>
 
             <StartButton onClick={() => setIsActive((state) => !state)}>
                 Click to fire
             </StartButton>
             
-        </BoxContainer>
+        </NewContainerBox>
     );
 }

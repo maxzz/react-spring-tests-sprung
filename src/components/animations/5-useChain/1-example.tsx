@@ -1,7 +1,6 @@
 import { useSpring, useSpringRef, useChain } from '@react-spring/web';
-import { AnimationContainter, BoxContainer, Explanation } from '../../../styles/styles';
 import { AnimatedBox, AnimatedCircle } from '@/components/ui/animated';
-import { StartButton } from '@/components/ui';
+import { NewContainerAnimation, NewContainerBox, NewExplanation, StartButton } from '@/components/ui';
 import { ExampleProps } from './common';
 
 export function Example1({ trail, trailRef, elements, firstAnimationTriggered, setFirstAnimationTriggered, setSecondAnimationTriggered }: ExampleProps) {
@@ -15,17 +14,17 @@ export function Example1({ trail, trailRef, elements, firstAnimationTriggered, s
     // Our useChain hook takes an array of references of our defined animations
     useChain([springRef, trailRef]); //For our first example
     return (
-        <BoxContainer>
+        <NewContainerBox>
             <h1>Example 1: useChain (useSpring followed by useTrail)</h1>
-            <Explanation>
+            <NewExplanation>
                 The first animation in our useChain hook is a useSpring to fade in our
                 box. That box will be able to trigger our second animation. Notice how
                 we can still trigger the second animation while our useSpring has not
                 fired yet, remember useSpring does not unmount our element from the dom
                 it is always there
-            </Explanation>
+            </NewExplanation>
 
-            <AnimationContainter>
+            <NewContainerAnimation>
                 <AnimatedBox
                     className="clickable chain"
                     style={spring}
@@ -55,12 +54,12 @@ export function Example1({ trail, trailRef, elements, firstAnimationTriggered, s
                     ))}
                 </AnimatedBox>
 
-            </AnimationContainter>
+            </NewContainerAnimation>
 
             <StartButton onClick={() => setFirstAnimationTriggered((state) => !state)}>
                 Trigger 1st animation
             </StartButton>
 
-        </BoxContainer>
+        </NewContainerBox>
     );
 }

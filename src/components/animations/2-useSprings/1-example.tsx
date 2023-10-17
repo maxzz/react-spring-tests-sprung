@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { useSpring } from '@react-spring/web';
-import { AnimationContainter, BoxContainer } from '../../../styles/styles';
 import { AnimatedBox } from '@/components/ui/animated';
 import { CommonExplanation, elements } from './common';
-import { StartButton } from '@/components/ui';
+import { NewContainerAnimation, NewContainerBox, StartButton } from '@/components/ui';
 
 // useSpring all elements have the same spring
 
@@ -26,7 +25,7 @@ export function Example1() {
 
     return (<>
         <CommonExplanation />
-        <BoxContainer>
+        <NewContainerBox>
             <div className="">
                 <h1>useSpring state method</h1>
                 <div className="hook-explanation">
@@ -35,18 +34,18 @@ export function Example1() {
                 </div>
             </div>
 
-            <AnimationContainter>
+            <NewContainerAnimation>
                 {elements.map((element) => (
                     <AnimatedBox style={springs1}>
                         <h1>item {element}</h1>
                     </AnimatedBox>
                 ))}
-            </AnimationContainter>
+            </NewContainerAnimation>
 
             <StartButton onClick={() => setIsActive((state) => !state)}>
                 Click to change state
             </StartButton>
 
-        </BoxContainer>
+        </NewContainerBox>
     </>);
 }

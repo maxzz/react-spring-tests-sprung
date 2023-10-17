@@ -1,7 +1,6 @@
 import { useTransition, useSpringRef, useChain } from '@react-spring/web';
-import { AnimationContainter, BoxContainer, Explanation } from '../../../styles/styles';
 import { AnimatedBox, AnimatedCircle } from '@/components/ui/animated';
-import { StartButton } from '@/components/ui';
+import { NewContainerAnimation, NewContainerBox, NewExplanation, StartButton } from '@/components/ui';
 import { ExampleProps } from './common';
 
 export function Example2({ trail, trailRef, elements, firstAnimationTriggered, setFirstAnimationTriggered, setSecondAnimationTriggered }: ExampleProps) {
@@ -23,15 +22,15 @@ export function Example2({ trail, trailRef, elements, firstAnimationTriggered, s
     useChain([transitionRef, trailRef]);
 
     return (
-        <BoxContainer>
+        <NewContainerBox>
             <h1>Example 2: useChain (useTransition followed by useTrail)</h1>
-            <Explanation>
+            <NewExplanation>
                 The first animation in our useChain hook is a useTrail to mount our box.
                 That box will be able to trigger our second animation which is the same
                 useTrail as in example 1.
-            </Explanation>
+            </NewExplanation>
 
-            <AnimationContainter>
+            <NewContainerAnimation>
                 {transition(
                     (spring, item) => item && (
                         <AnimatedBox
@@ -50,12 +49,12 @@ export function Example2({ trail, trailRef, elements, firstAnimationTriggered, s
                         </AnimatedBox>
                     )
                 )}
-            </AnimationContainter>
+            </NewContainerAnimation>
 
             <StartButton onClick={() => setFirstAnimationTriggered((state) => !state)}>
                 Trigger 1st animation
             </StartButton>
 
-        </BoxContainer>
+        </NewContainerBox>
     );
 }

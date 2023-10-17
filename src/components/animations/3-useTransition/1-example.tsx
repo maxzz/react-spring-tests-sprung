@@ -1,16 +1,15 @@
-import { AnimationContainter, BoxContainer } from '../../../styles/styles';
 import { ExampleProps } from './common';
 import { AnimatedBox } from '@/components/ui/animated';
-import { StartButton } from '@/components/ui';
+import { NewContainerAnimation, NewContainerBox, StartButton } from '@/components/ui';
 
 // Single element mounting and unmounting
 
 export function Example1({ transition, setIsActive }: ExampleProps) {
     return (
-        <BoxContainer>
+        <NewContainerBox>
             <h1>useTransition, mounting and unmounting a single element</h1>
 
-            <AnimationContainter>
+            <NewContainerAnimation>
                 {transition(
                     (spring, item) => item && (
                         <AnimatedBox style={spring}>
@@ -18,12 +17,12 @@ export function Example1({ transition, setIsActive }: ExampleProps) {
                         </AnimatedBox>
                     )
                 )}
-            </AnimationContainter>
+            </NewContainerAnimation>
 
             <StartButton onClick={() => setIsActive((state) => !state)}>
                 Click to change state
             </StartButton>
             
-        </BoxContainer>
+        </NewContainerBox>
     );
 }

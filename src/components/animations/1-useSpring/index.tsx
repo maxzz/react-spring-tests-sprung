@@ -1,14 +1,14 @@
-import { HookExplanation, BoxContainer, AnimationContainter } from '../../../styles/styles';
+import { NewContainerAnimation, NewContainerBox, NewHookExplanation } from '@/components/ui';
 import { Example1 } from './1-example';
 import { Example2 } from './2-example';
 import { Example3 } from './3-example';
 
 export function PageUseSpring() {
     return (<>
-        <HookExplanation>
+        <NewHookExplanation>
             1. useSpring
-        </HookExplanation>
-        <BoxContainer>
+        </NewHookExplanation>
+        <NewContainerBox>
             <div className="">
                 <h1>How we can trigger a useSpring animation</h1>
                 <div className="hook-explanation">
@@ -21,12 +21,12 @@ export function PageUseSpring() {
                 </span>
             </div>
 
-            <AnimationContainter>
+            <NewContainerAnimation>
                 <Example1 />
                 <Example2 />
                 <Example3 />
-            </AnimationContainter>
+            </NewContainerAnimation>
             
-        </BoxContainer>
+        </NewContainerBox>
     </>);
 }
