@@ -20,6 +20,9 @@ dependencies:
   react-spring:
     specifier: ^9.5.5
     version: 9.7.3(@react-three/fiber@8.14.5)(konva@9.2.2)(react-dom@18.2.0)(react-konva@18.2.10)(react-native@0.72.6)(react-zdog@1.2.2)(react@18.2.0)(three@0.157.0)(zdog@1.1.3)
+  react-use-measure:
+    specifier: ^2.1.1
+    version: 2.1.1(react-dom@18.2.0)(react@18.2.0)
   tailwind-merge:
     specifier: ^1.14.0
     version: 1.14.0
