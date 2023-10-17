@@ -1,3 +1,4 @@
+import { classNames } from "@/utils/classnames";
 import { animated, useResize, useSpring } from "@react-spring/web";
 import { HTMLAttributes, useState } from "react";
 import useMesure from "react-use-measure";
@@ -29,12 +30,27 @@ export default function AnimatedDropdown({ open, children }: React.PropsWithChil
     );
 }
 
+export const animationConfig = {
+    //config: { mass: 0.2, tension: 692, clamp: true },
+    config: { duration: 200 },
+};
+
+export function UIIconUpDown({ open, className, ...rest }: { open: boolean; } & React.SVGAttributes<SVGSVGElement>) {
+    const styles = useSpring({ open: open ? 1 : 0, ...animationConfig });
+    return (
+        <svg className={classNames("w-6 h-6 p-1 stroke-current stroke-[.6rem] fill-transparent", className)} viewBox="0 0 100 100" {...rest}>
+            <animated.path d={styles.open.to({ range: [0, 1], output: ["M 15 34 L 45 65 L 78 34", "M 15 53 L 45 23 L 78 53"] })} />
+        </svg>
+    );
+}
+
 export function Section({ children }: HTMLAttributes<HTMLDivElement>) {
     const [open, toggle] = useState(false);
     return (
         <div className="">
-            <button onClick={() => toggle((p) => !p)}>
-                Open
+            <button className="flex items-center" onClick={() => toggle((p) => !p)}>
+                <div className="">Open</div>
+                <UIIconUpDown open={open} className="mt-1 pt-2" />
             </button>
             <AnimatedDropdown open={open}>
                 {children}

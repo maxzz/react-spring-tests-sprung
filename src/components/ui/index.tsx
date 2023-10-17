@@ -4,3 +4,4 @@ export * from './controls/container-box';
 export * from './controls/explanation';
 export * from './controls/animated-box';
 export * from './controls/animated-circle';
+export * from './controls/section';
