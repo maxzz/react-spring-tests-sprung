@@ -1,6 +1,7 @@
-import { AnimationContainter, BoxContainer, ToggleButton } from '../../../styles/styles';
+import { AnimationContainter, BoxContainer } from '../../../styles/styles';
 import { ExampleProps } from './common';
 import { AnimatedBox } from '@/components/ui/animated';
+import { StartButton } from '@/components/ui';
 
 // Single element mounting and unmounting
 
@@ -19,9 +20,9 @@ export function Example1({ transition, setIsActive }: ExampleProps) {
                 )}
             </AnimationContainter>
 
-            <ToggleButton onClick={() => setIsActive((state) => !state)}>
+            <StartButton onClick={() => setIsActive((state) => !state)}>
                 Click to change state
-            </ToggleButton>
+            </StartButton>
             
         </BoxContainer>
     );

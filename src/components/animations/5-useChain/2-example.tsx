@@ -1,6 +1,7 @@
 import { useTransition, useSpringRef, useChain } from '@react-spring/web';
-import { AnimationContainter, BoxContainer, Explanation, ToggleButton } from '../../../styles/styles';
+import { AnimationContainter, BoxContainer, Explanation } from '../../../styles/styles';
 import { AnimatedBox, AnimatedCircle } from '@/components/ui/animated';
+import { StartButton } from '@/components/ui';
 import { ExampleProps } from './common';
 
 export function Example2({ trail, trailRef, elements, firstAnimationTriggered, setFirstAnimationTriggered, setSecondAnimationTriggered }: ExampleProps) {
@@ -51,9 +52,9 @@ export function Example2({ trail, trailRef, elements, firstAnimationTriggered, s
                 )}
             </AnimationContainter>
 
-            <ToggleButton onClick={() => setFirstAnimationTriggered((state) => !state)}>
+            <StartButton onClick={() => setFirstAnimationTriggered((state) => !state)}>
                 Trigger 1st animation
-            </ToggleButton>
+            </StartButton>
 
         </BoxContainer>
     );

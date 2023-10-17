@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { config, TransitionFn, useTransition } from '@react-spring/web';
-import { AnimationContainter, BoxContainer, HookExplanation, ToggleButton } from '../../../styles/styles';
+import { AnimationContainter, BoxContainer, HookExplanation } from '../../../styles/styles';
 import { AnimatedBox } from '@/components/ui/animated';
+import { StartButton } from '@/components/ui';
 import { ExampleProps } from './common';
 
 // Multiple elements mounting and unmounting
@@ -30,9 +31,9 @@ export function Example2({ transition, setIsActive }: ExampleProps) {
                 )}
             </AnimationContainter>
 
-            <ToggleButton onClick={() => setIsActive((state) => !state)}>
+            <StartButton onClick={() => setIsActive((state) => !state)}>
                 Click to fire
-            </ToggleButton>
+            </StartButton>
             
         </BoxContainer>
     );

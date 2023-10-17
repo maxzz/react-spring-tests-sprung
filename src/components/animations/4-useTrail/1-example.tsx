@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { config, useTrail, useTransition } from '@react-spring/web';
-import { AnimationContainter, BoxContainer, HookExplanation, ToggleButton } from '../../../styles/styles';
+import { AnimationContainter, BoxContainer, HookExplanation } from '../../../styles/styles';
 import { AnimatedBox } from '@/components/ui/animated';
+import { StartButton } from '@/components/ui';
 
 // Staggered spring animations using useTrail
 
@@ -40,9 +41,9 @@ export function Example1() {
                 ))}
             </AnimationContainter>
 
-            <ToggleButton onClick={() => setIsActive((state) => !state)}>
+            <StartButton onClick={() => setIsActive((state) => !state)}>
                 Click to change state
-            </ToggleButton>
+            </StartButton>
             
         </BoxContainer>
     );

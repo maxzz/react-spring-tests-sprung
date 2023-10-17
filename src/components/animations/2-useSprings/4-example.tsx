@@ -1,6 +1,7 @@
 import { useSprings } from '@react-spring/web';
-import { AnimationContainter, BoxContainer, Explanation, ToggleButton } from '../../../styles/styles';
+import { AnimationContainter, BoxContainer, Explanation } from '../../../styles/styles';
 import { AnimatedBox } from '@/components/ui/animated';
+import { StartButton } from '@/components/ui';
 import { CommonExplanation, elements } from './common';
 
 // Event animation
@@ -39,9 +40,9 @@ export function Example4() {
                 ))}
             </AnimationContainter>
 
-            <ToggleButton onClick={fireAnimation}>
+            <StartButton onClick={fireAnimation}>
                 Click to fire animation
-            </ToggleButton>
+            </StartButton>
             
         </BoxContainer>
     </>);

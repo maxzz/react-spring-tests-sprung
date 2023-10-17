@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useSpring } from '@react-spring/web';
-import { AnimationContainter, BoxContainer, ToggleButton } from '../../../styles/styles';
+import { AnimationContainter, BoxContainer } from '../../../styles/styles';
 import { AnimatedBox } from '@/components/ui/animated';
 import { CommonExplanation, elements } from './common';
+import { StartButton } from '@/components/ui';
 
 // useSpring all elements have the same spring
 
@@ -42,10 +43,10 @@ export function Example1() {
                 ))}
             </AnimationContainter>
 
-            <ToggleButton onClick={() => setIsActive((state) => !state)}>
+            <StartButton onClick={() => setIsActive((state) => !state)}>
                 Click to change state
-            </ToggleButton>
-            
+            </StartButton>
+
         </BoxContainer>
     </>);
 }
