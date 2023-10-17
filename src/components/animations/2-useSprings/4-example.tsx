@@ -1,6 +1,6 @@
 import { useSprings } from '@react-spring/web';
 import { AnimatedBox } from '@/components/ui/animated';
-import { NewContainerAnimation, NewContainerBox, NewExplanation, NewNotes, StartButton } from '@/components/ui';
+import { NewContainerForAnimation, NewContainerBox, NewExplanation, NewNotes, StartButton } from '@/components/ui';
 import { CommonExplanation, elements } from './common';
 
 // Event animation
@@ -33,13 +33,13 @@ export function Example4() {
 
         <NewContainerBox>
 
-            <NewContainerAnimation>
+            <NewContainerForAnimation>
                 {springs3.map((spring, i) => (
                     <AnimatedBox style={spring} key={i}>
                         <h1>item {i}</h1>
                     </AnimatedBox>
                 ))}
-            </NewContainerAnimation>
+            </NewContainerForAnimation>
 
             <StartButton onClick={fireAnimation}>
                 Click to fire animation

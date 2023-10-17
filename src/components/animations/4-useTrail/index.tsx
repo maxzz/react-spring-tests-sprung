@@ -8,16 +8,16 @@ export function PageUseTrail() {
             4. useTrail
         </NewSection>
 
-        <NewHookExplanation>
+        {/* <NewHookExplanation>
             As stated in the React-Spring documentation
             <br />
             <br />
             'useTrail has an identical API signature to useSprings the difference is
             the hook automatically orchestrates the springs to stagger one after the
             other.'
-        </NewHookExplanation>
+        </NewHookExplanation> */}
 
         <Example1 />
-        {/* <Example2 /> */}
+        <Example2 />
     </>);
 }

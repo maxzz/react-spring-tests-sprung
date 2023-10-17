@@ -39,16 +39,14 @@ export function PageUseChain() {
             a ref to each, and pass those refs to useChain in an array
         </NewHookExplanation>
 
-        {/*
-            <Example1
-                elements={elements}
-                trail={trail}
-                trailRef={trailRef}
-                firstAnimationTriggered={firstAnimationTriggered}
-                setFirstAnimationTriggered={setFirstAnimationTriggered}
-                setSecondAnimationTriggered={setSecondAnimationTriggered}
-            />
-        */}
+        <Example1
+            elements={elements}
+            trail={trail}
+            trailRef={trailRef}
+            firstAnimationTriggered={firstAnimationTriggered}
+            setFirstAnimationTriggered={setFirstAnimationTriggered}
+            setSecondAnimationTriggered={setSecondAnimationTriggered}
+        />
 
         <Example2
             elements={elements}

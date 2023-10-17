@@ -1,5 +1,5 @@
 import { AnimatedBox } from '@/components/ui/animated';
-import { NewContainerAnimation, NewContainerBox, StartButton } from '@/components/ui';
+import { NewContainerForAnimation, NewContainerBox, NewNotes, StartButton } from '@/components/ui';
 import { ExampleProps } from './common';
 
 // Multiple elements mounting and unmounting
@@ -13,11 +13,17 @@ export function Example2({ transition, setIsActive }: ExampleProps) {
         { id: 3, message: 'By' },
         { id: 4, message: 'T-Pain' }
     ];
-    return (
+    return (<>
+        <NewNotes>
+            <div className="">
+                <div className="font-bold">2. useTransition, mounting and unmounting of multiple elements</div>
+                <p>
+                </p>
+            </div>
+        </NewNotes>
         <NewContainerBox>
-            <h1>useTransition, mounting and unmounting of multiple elements</h1>
 
-            <NewContainerAnimation>
+            <NewContainerForAnimation>
                 {transition(
                     (spring, item) => item &&
                         elements.map((element) => (
@@ -26,12 +32,12 @@ export function Example2({ transition, setIsActive }: ExampleProps) {
                             </AnimatedBox>
                         ))
                 )}
-            </NewContainerAnimation>
+            </NewContainerForAnimation>
 
             <StartButton onClick={() => setIsActive((state) => !state)}>
                 Click to fire
             </StartButton>
             
         </NewContainerBox>
-    );
+    </>);
 }

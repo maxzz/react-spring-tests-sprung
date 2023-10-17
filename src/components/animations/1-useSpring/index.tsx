@@ -1,4 +1,4 @@
-import { NewContainerAnimation, NewContainerBox, NewHookExplanation, NewNotes, NewSection } from '@/components/ui';
+import { NewContainerForAnimation, NewContainerBox, NewHookExplanation, NewNotes, NewSection } from '@/components/ui';
 import { Example1 } from './1-example';
 import { Example2 } from './2-example';
 import { Example3 } from './3-example';
@@ -10,7 +10,7 @@ export function PageUseSpring() {
             1. useSpring
         </NewSection>
 
-        <NewNotes>
+        {/* <NewNotes>
             <p>How we can trigger a useSpring animation?</p>
             <p className="hook-explanation">
                 We use useSpring when we want to animate an element from state/position
@@ -20,18 +20,18 @@ export function PageUseSpring() {
                 Animates on page load | Animates based on boolean value | Animates via
                 an event.
             </p>
-        </NewNotes>
+        </NewNotes> */}
 
         <Section>
-            <NewContainerBox>
+            {/* <NewContainerBox> */}
 
-                <NewContainerAnimation>
+                <NewContainerForAnimation>
                     <Example1 />
                     <Example2 />
                     <Example3 />
-                </NewContainerAnimation>
+                </NewContainerForAnimation>
 
-            </NewContainerBox>
+            {/* </NewContainerBox> */}
         </Section>
     </>);
 }

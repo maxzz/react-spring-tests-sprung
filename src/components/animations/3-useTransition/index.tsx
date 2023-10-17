@@ -42,13 +42,14 @@ export function PageUseTransition() {
         <NewSection>
             3. useTransition
         </NewSection>
-        <NewHookExplanation>
+
+        {/* <NewHookExplanation>
             We the useTransition hook for mounting and unmounting an
             element/elements to the dom. As opposed to the useSpring where the
             elements are already on the dom tree and remain there after their spring
-        </NewHookExplanation>
+        </NewHookExplanation> */}
 
         <Example1 transition={transition} setIsActive={setIsActive} />
-        {/* <Example2 transition={transition} setIsActive={setIsActive} /> */}
+        <Example2 transition={transition} setIsActive={setIsActive} />
     </>);
 }

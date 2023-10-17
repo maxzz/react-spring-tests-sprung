@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { config, useTrail, useTransition } from '@react-spring/web';
 import { AnimatedBox } from '@/components/ui/animated';
-import { NewContainerAnimation, NewContainerBox, StartButton } from '@/components/ui';
+import { NewContainerForAnimation, NewContainerBox, NewNotes, StartButton } from '@/components/ui';
 
 // Staggered spring animations using useTrail
 
@@ -24,22 +24,29 @@ export function Example2() {
         config: config.molasses
     });
 
-    return (
-        <NewContainerBox>
-            <h1>useTrail automatically staggers animations for us</h1>
+    return (<>
+        <NewNotes>
+            <div className="">
+                <div className="font-bold">2. useTrail automatically staggers animations for us</div>
+                <p>
+                </p>
+            </div>
+        </NewNotes>
 
-            <NewContainerAnimation>
+        <NewContainerBox>
+
+            <NewContainerForAnimation>
                 {trail2.map((transition, i) => (
-                    <AnimatedBox style={transition}>
+                    <AnimatedBox style={transition} key={i}>
                         <h1>{!isActive ? message[i].side1 : message[i].side2}</h1>
                     </AnimatedBox>
                 ))}
-            </NewContainerAnimation>
+            </NewContainerForAnimation>
 
             <StartButton onClick={() => setIsActive((state) => !state)}>
                 Click to fire
             </StartButton>
 
         </NewContainerBox>
-    );
+    </>);
 }

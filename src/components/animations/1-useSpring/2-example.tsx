@@ -17,8 +17,10 @@ export function Example2() {
     });
 
     return (
-        <AnimatedBox style={animation2} onClick={() => setIsActive((state) => !state)}>
-            {isActive ? 'Click Me!' : 'Square!'}
-        </AnimatedBox>
+        <div className="cursor-pointer" onClick={() => setIsActive((state) => !state)}>
+            <AnimatedBox style={animation2} >
+                {isActive ? 'Click Me!' : 'Square!'}
+            </AnimatedBox>
+        </div>
     );
 }

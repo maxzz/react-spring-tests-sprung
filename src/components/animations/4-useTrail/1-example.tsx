@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { config, useTrail, useTransition } from '@react-spring/web';
 import { AnimatedBox } from '@/components/ui/animated';
-import { NewContainerAnimation, NewContainerBox, StartButton } from '@/components/ui';
+import { NewContainerForAnimation, NewContainerBox, NewNotes, StartButton } from '@/components/ui';
 
 // Staggered spring animations using useTrail
 
@@ -28,22 +28,29 @@ export function Example1() {
         delay: 500 //We can also add a delay of 500ms
     });
 
-    return (
-        <NewContainerBox>
-            <h1>useTrail automatically staggers springs for us</h1>
+    return (<>
+        <NewNotes>
+            <div className="">
+                <div className="font-bold">1. useTrail automatically staggers springs for us</div>
+                <p>
+                </p>
+            </div>
+        </NewNotes>
 
-            <NewContainerAnimation>
+        <NewContainerBox>
+
+            <NewContainerForAnimation>
                 {trail1.map((transition, i) => (
                     <AnimatedBox style={transition} key={i}>
                         <h1>{elements[i].message}</h1>
                     </AnimatedBox>
                 ))}
-            </NewContainerAnimation>
+            </NewContainerForAnimation>
 
             <StartButton onClick={() => setIsActive((state) => !state)}>
                 Click to change state
             </StartButton>
             
         </NewContainerBox>
-    );
+    </>);
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useSpring, useSprings } from '@react-spring/web';
 import { AnimatedBox } from '@/components/ui/animated';
-import { NewContainerAnimation, NewContainerBox, NewExplanation, NewNotes, StartButton } from '@/components/ui';
+import { NewContainerForAnimation, NewContainerBox, NewExplanation, NewNotes, StartButton } from '@/components/ui';
 import { CommonExplanation, elements } from './common';
 
 // useSprings all elements have the same spring
@@ -36,13 +36,13 @@ export function Example2() {
 
         <NewContainerBox>
 
-            <NewContainerAnimation>
+            <NewContainerForAnimation>
                 {springs2.map((spring, i) => (
                     <AnimatedBox style={spring} key={i}>
                         <h1>item {i}</h1>
                     </AnimatedBox>
                 ))}
-            </NewContainerAnimation>
+            </NewContainerForAnimation>
 
             <StartButton onClick={() => setIsActive((state) => !state)}>
                 Click to change state
