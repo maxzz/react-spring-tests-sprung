@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useSpring, useSprings } from '@react-spring/web';
 import { AnimatedBox } from '@/components/ui/animated';
-import { NewContainerAnimation, NewContainerBox, NewExplanation, StartButton } from '@/components/ui';
+import { NewContainerAnimation, NewContainerBox, NewExplanation, NewNotes, StartButton } from '@/components/ui';
 import { CommonExplanation, elements } from './common';
 
 // useSprings all elements have the same spring
@@ -25,14 +25,16 @@ export function Example2() {
     );
 
     return (<>
-        <CommonExplanation />
-        <NewContainerBox>
-            <h1>useSprings state method</h1>
-            <NewExplanation>
+        <NewNotes>
+            <div className="font-bold">2. useSprings state method</div>
+            <p>
                 We'll map and render animated boxes given the length of our dataset (the
                 first argument of our useSprings hooks). Toggle the state to run the
                 animation.
-            </NewExplanation>
+            </p>
+        </NewNotes>
+
+        <NewContainerBox>
 
             <NewContainerAnimation>
                 {springs2.map((spring, i) => (

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSpring } from '@react-spring/web';
 import { AnimatedBox } from '@/components/ui/animated';
 import { CommonExplanation, elements } from './common';
-import { NewContainerAnimation, NewContainerBox, StartButton } from '@/components/ui';
+import { NewContainerAnimation, NewContainerBox, NewNotes, StartButton } from '@/components/ui';
 
 // useSpring all elements have the same spring
 
@@ -24,16 +24,17 @@ export function Example1() {
     });
 
     return (<>
-        <CommonExplanation />
-        <NewContainerBox>
+        <NewNotes>
             <div className="">
-                <h1>useSpring state method</h1>
-                <div className="hook-explanation">
+                <div className="font-bold">1. useSpring state method</div>
+                <p>
                     Given the data set we'll map and render out boxs with our spring
                     attached. Trigger the spring when the state changes
-                </div>
+                </p>
             </div>
+        </NewNotes>
 
+        <NewContainerBox>
             <NewContainerAnimation>
                 {elements.map((element, i) => (
                     <AnimatedBox style={springs1} key={i}>

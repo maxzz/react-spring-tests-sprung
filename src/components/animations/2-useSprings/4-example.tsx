@@ -1,6 +1,6 @@
 import { useSprings } from '@react-spring/web';
 import { AnimatedBox } from '@/components/ui/animated';
-import { NewContainerAnimation, NewContainerBox, NewExplanation, StartButton } from '@/components/ui';
+import { NewContainerAnimation, NewContainerBox, NewExplanation, NewNotes, StartButton } from '@/components/ui';
 import { CommonExplanation, elements } from './common';
 
 // Event animation
@@ -21,15 +21,17 @@ export function Example4() {
     };
 
     return (<>
-        <CommonExplanation />
-        <NewContainerBox>
-            <h1>useSprings on event method</h1>
-            <NewExplanation>
+        <NewNotes>
+            <div className="font-bold">4. useSprings on event method</div>
+            <p>
                 We'll map and render animated boxes given the length of our dataset (the
                 first argument of our useSprings hooks). Click to fire the handler
                 function. Notice everytime we click if after it will jump to the
                 beginning of the animation and immediateley run
-            </NewExplanation>
+            </p>
+        </NewNotes>
+
+        <NewContainerBox>
 
             <NewContainerAnimation>
                 {springs3.map((spring, i) => (
@@ -42,7 +44,7 @@ export function Example4() {
             <StartButton onClick={fireAnimation}>
                 Click to fire animation
             </StartButton>
-            
+
         </NewContainerBox>
     </>);
 }
