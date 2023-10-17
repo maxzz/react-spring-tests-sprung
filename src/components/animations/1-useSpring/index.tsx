@@ -1,13 +1,14 @@
-import { NewContainerAnimation, NewContainerBox, NewHookExplanation } from '@/components/ui';
+import { NewContainerAnimation, NewContainerBox, NewHookExplanation, NewSection } from '@/components/ui';
 import { Example1 } from './1-example';
 import { Example2 } from './2-example';
 import { Example3 } from './3-example';
 
 export function PageUseSpring() {
     return (<>
-        <NewHookExplanation>
+        <NewSection>
             1. useSpring
-        </NewHookExplanation>
+        </NewSection>
+
         <NewContainerBox>
             <div className="">
                 <h1>How we can trigger a useSpring animation</h1>

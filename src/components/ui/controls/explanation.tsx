@@ -29,3 +29,11 @@ export function NewHookExplanation({ children, className, ...rest }: HTMLAttribu
         </div>
     );
 }
+
+export function NewSection({ children, className, ...rest }: HTMLAttributes<HTMLDivElement>) {
+    return (
+        <div className={classNames("mt-4 -ml-12 px-4 py-4 text-xl text-white bg-gray-700", className)} {...rest}>
+            {children}
+        </div>
+    );
+}

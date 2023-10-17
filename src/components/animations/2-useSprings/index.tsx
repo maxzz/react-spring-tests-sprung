@@ -1,4 +1,4 @@
-import { NewHookExplanation } from '@/components/ui';
+import { NewHookExplanation, NewSection } from '@/components/ui';
 import { Example1 } from './1-example';
 import { Example2 } from './2-example';
 import { Example3 } from './3-example';
@@ -6,13 +6,13 @@ import { Example4 } from './4-example';
 
 export function PageUseSprings() {
     return (<>
-        <NewHookExplanation>
+        <NewSection>
             2. useSprings
-        </NewHookExplanation>
+        </NewSection>
 
-        {/* <Example1 /> */}
-        {/* <Example2 /> */}
+        <Example1 />
+        <Example2 />
         <Example3 />
-        {/* <Example4 /> */}
+        <Example4 />
     </>);
 }

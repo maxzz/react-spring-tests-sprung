@@ -1,12 +1,12 @@
-import { NewHookExplanation } from '@/components/ui';
+import { NewHookExplanation, NewSection } from '@/components/ui';
 import { Example1 } from './1-example';
 import { Example2 } from './2-example';
 
 export function PageUseTrail() {
     return (<>
-        <NewHookExplanation>
+        <NewSection>
             4. useTrail
-        </NewHookExplanation>
+        </NewSection>
 
         <NewHookExplanation>
             As stated in the React-Spring documentation
