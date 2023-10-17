@@ -5,8 +5,8 @@ export const AnimatedBox = styled(animated.div, {
     position: 'relative',
 
     padding: '.5rem',
-    width: '7rem',
-    height: '7rem',
+    width: '3rem',
+    height: '3rem',
     fontSize: '.7rem',
 
     color: 'black',

@@ -6,20 +6,27 @@ import { Example2 } from './2-example';
 
 // Chaining animations based on state
 
+// Our second animation will be a useTrail to animate 4 circles
+// These circles are positioned absolute, so they are stacked on top of each other
+// We need to offset each of them, so we'll declare some offset values for them to inject later
+// const elements = [
+//     { id: 1, message: '🐷', offset: '-50%' },
+//     { id: 2, message: '🐶', offset: '-175%' },
+//     { id: 3, message: '🐸', offset: '-300%' },
+//     { id: 4, message: '🐮', offset: '-425%' }
+// ];
+const ofs = 70;
+const elements = [
+    { id: 1, message: '🐷', offset: `-${0 * ofs}%` },
+    { id: 2, message: '🐶', offset: `-${1 * ofs}%` },
+    { id: 3, message: '🐸', offset: `-${2 * ofs}%` },
+    { id: 4, message: '🐮', offset: `-${3 * ofs}%` }
+];
+
 export function PageUseChain() {
     // First we need to declare a trigger for each animation
     const [firstAnimationTriggered, setFirstAnimationTriggered] = useState(false);
     const [secondAnimationTriggered, setSecondAnimationTriggered] = useState(false);
-
-    // Our second animation will be a useTrail to animate 4 circles
-    // These circles are positioned absolute, so they are stacked on top of each other
-    // We need to offset each of them, so we'll declare some offset values for them to inject later
-    const elements = [
-        { id: 1, message: '🐷', offset: '-50%' },
-        { id: 2, message: '🐶', offset: '-175%' },
-        { id: 3, message: '🐸', offset: '-300%' },
-        { id: 4, message: '🐮', offset: '-425%' }
-    ];
 
     // Our second animation will animate based on the secondAnimationTriggered variable
     // We'll use this trail for both example 1 and 2,
@@ -34,10 +41,10 @@ export function PageUseChain() {
         <NewSection>
             5. useChain
         </NewSection>
-        <NewHookExplanation>
+        {/* <NewHookExplanation>
             To use useChain we just need to configure 2 spring animations and attach
             a ref to each, and pass those refs to useChain in an array
-        </NewHookExplanation>
+        </NewHookExplanation> */}
 
         <Example1
             elements={elements}

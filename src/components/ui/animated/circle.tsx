@@ -5,8 +5,8 @@ export const AnimatedCircle = styled(animated.div, {
     alignSelf: 'center',
 
     position: 'absolute',
-    width: '5rem',
-    height: '5rem',
+    width: '3rem',
+    height: '3rem',
 
     border: '2px solid red',
     borderRadius: '50% 50%',

@@ -16,14 +16,14 @@ export function Example1({ trail, trailRef, elements, firstAnimationTriggered, s
     return (<>
         <NewNotes>
             <div className="">
-                <div className="font-bold">1: useChain (useSpring followed by useTrail)</div>
-                <p>
+                <div className="font-bold">1: useChain with useSpring followed by useTrail</div>
+                {/* <p>
                     The first animation in our useChain hook is a useSpring to fade in our
                     box. That box will be able to trigger our second animation. Notice how
                     we can still trigger the second animation while our useSpring has not
                     fired yet, remember useSpring does not unmount our element from the dom
                     it is always there
-                </p>
+                </p> */}
             </div>
         </NewNotes>
 
@@ -46,14 +46,10 @@ export function Example1({ trail, trailRef, elements, firstAnimationTriggered, s
                         </h2>
 
                         {trail.map((animation, i) => (
-                            <AnimatedCircle
-                                style={{
-                                    x: `${elements[i].offset}`,
-                                    ...animation
-                                }}
-                                key={i}
-                            >
-                                <span style={{ fontSize: '3rem' }}>{elements[i].message}</span>
+                            <AnimatedCircle style={{ x: `${elements[i].offset}`, ...animation }} key={i}>
+                                <span style={{ fontSize: '1rem' }}>
+                                    {elements[i].message}
+                                </span>
                             </AnimatedCircle>
                         ))}
                     </AnimatedBox>

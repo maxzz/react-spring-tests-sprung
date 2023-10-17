@@ -24,12 +24,12 @@ export function Example2({ trail, trailRef, elements, firstAnimationTriggered, s
     return (<>
         <NewNotes>
             <div className="">
-                <div className="font-bold">2. useChain (useTransition followed by useTrail)</div>
-                <p>
+                <div className="font-bold">2. useChain with useTransition followed by useTrail</div>
+                {/* <p>
                     The first animation in our useChain hook is a useTrail to mount our box.
                     That box will be able to trigger our second animation which is the same
                     useTrail as in example 1.
-                </p>
+                </p> */}
             </div>
         </NewNotes>
 
@@ -46,7 +46,7 @@ export function Example2({ trail, trailRef, elements, firstAnimationTriggered, s
 
                                     {trail.map((animation, i) => (
                                         <AnimatedCircle style={{ x: `${elements[i].offset}`, ...animation }} key={i}>
-                                            <span style={{ fontSize: '3rem' }}>
+                                            <span style={{ fontSize: '1rem' }}>
                                                 {elements[i].message}
                                             </span>
                                         </AnimatedCircle>
