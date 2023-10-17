@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { config, TransitionFn, useTransition } from '@react-spring/web';
-import { AnimatedBox, AnimationContainter, BoxContainer, HookExplanation, ToggleButton } from '../../../styles/styles';
+import { AnimationContainter, BoxContainer, HookExplanation, ToggleButton } from '../../../styles/styles';
+import { AnimatedBox } from '@/components/ui/animated';
 import { ExampleProps } from './common';
 
 // Multiple elements mounting and unmounting

@@ -1,5 +1,5 @@
 import { useSpring } from 'react-spring';
-import { AnimatedBox } from '../../../styles/styles';
+import { AnimatedBox } from '@/components/ui/animated';
 
 // Animation on an event without state
 

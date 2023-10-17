@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useSpring } from 'react-spring';
-import { AnimatedBox } from '../../../styles/styles';
+import { AnimatedBox } from '@/components/ui/animated';
 
 // Animation based on state
 

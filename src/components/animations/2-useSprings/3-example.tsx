@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useSpring, useSprings } from '@react-spring/web';
-import { AnimatedBox, AnimationContainter, BoxContainer, Explanation, ToggleButton } from '../../../styles/styles';
+import { AnimationContainter, BoxContainer, Explanation, ToggleButton } from '../../../styles/styles';
+import { AnimatedBox } from '@/components/ui/animated';
 import { CommonExplanation, elements } from './common';
 
 // useSprings elements have base animation, but with variation between each
