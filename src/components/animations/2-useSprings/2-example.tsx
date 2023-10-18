@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useSpring, useSprings } from '@react-spring/web';
 import { DemoAnimatableBox } from '@/components/ui/animated';
-import { NewContainerForAnimation, NewContainerBox, NewExplanation, NewNotes, StartButton } from '@/components/ui';
-import { CommonExplanation, elements } from './common';
+import { NewContainerForAnimation, NewContainerBox, NewNotes, StartButton } from '@/components/ui';
+import { elements } from './common';
 
 // useSprings all elements have the same spring
 

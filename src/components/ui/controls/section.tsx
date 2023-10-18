@@ -1,7 +1,7 @@
-import { classNames } from "@/utils/classnames";
-import { animated, useResize, useSpring } from "@react-spring/web";
 import { HTMLAttributes, useState } from "react";
+import { animated, useSpring } from "@react-spring/web";
 import useMesure from "react-use-measure";
+import { classNames } from "@/utils/classnames";
 
 /**
  * @param open conditional to show content or hide
@@ -12,13 +12,7 @@ export default function AnimatedDropdown({ open, children }: React.PropsWithChil
 
     const styles = useSpring({
         height: open ? height ?? 0 : 0,
-        config: {
-            mass: 1.2,
-            tension: 300,
-            friction: 20,
-            clamp: true,
-            velocity: 0.01,
-        },
+        config: { mass: 1.2, tension: 300, friction: 20, clamp: true, velocity: 0.01, },
     });
 
     return (
@@ -44,17 +38,31 @@ export function UIIconUpDown({ open, className, ...rest }: { open: boolean; } & 
     );
 }
 
-export function Section({ children }: HTMLAttributes<HTMLDivElement>) {
+export function Section({ label, children }: { label: string; } & HTMLAttributes<HTMLDivElement>) {
     const [open, toggle] = useState(false);
     return (
-        <div className="">
-            <button className="flex items-center" onClick={() => toggle((p) => !p)}>
-                <div className="">Open</div>
-                <UIIconUpDown open={open} className="mt-1 pt-2" />
+        <div className="mt-4 -mx-12 text-xl text-white bg-gray-700">
+
+            <button className="w-full bg-red-500 flex items-center justify-between" onClick={() => toggle((p) => !p)}>
+                <div className="px-4 py-4">
+                    {label}
+                </div>
+                <UIIconUpDown open={open} className="mr-4" />
             </button>
-            <AnimatedDropdown open={open}>
-                {children}
-            </AnimatedDropdown>
+
+            <div className="">
+                <AnimatedDropdown open={open}>
+                    {children}
+                </AnimatedDropdown>
+            </div>
+        </div>
+    );
+}
+
+export function NewSection({ children, className, ...rest }: HTMLAttributes<HTMLDivElement>) {
+    return (
+        <div className={classNames("mt-4 -mx-12 px-4 py-4 text-xl text-white bg-gray-700", className)} {...rest}>
+            {children}
         </div>
     );
 }

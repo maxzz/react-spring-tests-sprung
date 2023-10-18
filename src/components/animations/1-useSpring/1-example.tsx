@@ -12,8 +12,8 @@ export function Example1() {
     });
 
     return (
-        <DemoAnimatableBox style={animation1}>
-            <p>State-less & no event</p>
+        <DemoAnimatableBox style={animation1} className="my-4 w-32">
+            <p className="text-center leading-4">No state animation (only initial render)</p>
         </DemoAnimatableBox>
     );
 }

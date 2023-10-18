@@ -12,13 +12,13 @@ export function Example2() {
     // If you want a property to remain unchanged based on state, then as you can see you can just leave it as a normal css property definition
     const animation2 = useSpring({
         transform: isActive ? 'rotate(720deg)' : 'rotate(0deg)',
-        borderRadius: isActive ? '50% 50%' : '0% 0%',
+        borderRadius: isActive ? '50% 50%' : '10% 10%',
         transformOrigin: 'center'
     });
 
     return (
         <div className="cursor-pointer" onClick={() => setIsActive((state) => !state)}>
-            <DemoAnimatableBox style={animation2} >
+            <DemoAnimatableBox style={animation2}  className="my-4 w-12 leading-4 text-center">
                 {isActive ? 'Click Me!' : 'Square!'}
             </DemoAnimatableBox>
         </div>

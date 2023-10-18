@@ -25,7 +25,7 @@ export function Example3() {
 
     return (
         <div className="cursor-pointer" onClick={fireAnimation}>
-            <DemoAnimatableBox style={animation3}>
+            <DemoAnimatableBox style={animation3} className="my-4 w-32">
                 <p>Onclick event</p>
             </DemoAnimatableBox>
         </div>

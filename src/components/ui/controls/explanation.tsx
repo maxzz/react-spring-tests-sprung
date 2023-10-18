@@ -30,17 +30,9 @@ export function NewHookExplanation({ children, className, ...rest }: HTMLAttribu
     );
 }
 
-export function NewSection({ children, className, ...rest }: HTMLAttributes<HTMLDivElement>) {
-    return (
-        <div className={classNames("mt-4 -mx-12 px-4 py-4 text-xl text-white bg-gray-700", className)} {...rest}>
-            {children}
-        </div>
-    );
-}
-
 export function NewNotes({ children, className, ...rest }: HTMLAttributes<HTMLDivElement>) {
     return (
-        <div className={classNames("-mx-12 px-4 py-3 text-sm bg-gray-400", className)} {...rest}>
+        <div className={classNames("px-4 py-3 text-sm text-gray-950 bg-gray-400", className)} {...rest}>
             {children}
         </div>
     );

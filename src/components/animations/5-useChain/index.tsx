@@ -1,20 +1,19 @@
 import { useState } from 'react';
 import { useTrail, useSpringRef } from '@react-spring/web';
-import { NewHookExplanation, NewSection } from '@/components/ui';
+import { NewHookExplanation, NewSection, Section } from '@/components/ui';
 import { Example1 } from './1-example';
 import { Example2 } from './2-example';
 
 // Chaining animations based on state
 
+{/* <NewHookExplanation>
+    To use useChain we just need to configure 2 spring animations and attach
+    a ref to each, and pass those refs to useChain in an array
+</NewHookExplanation> */}
+
 // Our second animation will be a useTrail to animate 4 circles
 // These circles are positioned absolute, so they are stacked on top of each other
 // We need to offset each of them, so we'll declare some offset values for them to inject later
-// const elements = [
-//     { id: 1, message: '🐷', offset: '-50%' },
-//     { id: 2, message: '🐶', offset: '-175%' },
-//     { id: 3, message: '🐸', offset: '-300%' },
-//     { id: 4, message: '🐮', offset: '-425%' }
-// ];
 const ofs = 70;
 const elements = [
     { id: 1, message: '🐷', offset: `-${0 * ofs}%` },
@@ -37,31 +36,25 @@ export function PageUseChain() {
         transform: secondAnimationTriggered ? 'translateX(-150%)' : 'translateX(150%)',
     });
 
-    return (<>
-        <NewSection>
-            5. useChain
-        </NewSection>
-        {/* <NewHookExplanation>
-            To use useChain we just need to configure 2 spring animations and attach
-            a ref to each, and pass those refs to useChain in an array
-        </NewHookExplanation> */}
+    return (
+        <Section label="5. useChain">
+            <Example1
+                elements={elements}
+                trail={trail}
+                trailRef={trailRef}
+                firstAnimationTriggered={firstAnimationTriggered}
+                setFirstAnimationTriggered={setFirstAnimationTriggered}
+                setSecondAnimationTriggered={setSecondAnimationTriggered}
+            />
 
-        <Example1
-            elements={elements}
-            trail={trail}
-            trailRef={trailRef}
-            firstAnimationTriggered={firstAnimationTriggered}
-            setFirstAnimationTriggered={setFirstAnimationTriggered}
-            setSecondAnimationTriggered={setSecondAnimationTriggered}
-        />
-
-        <Example2
-            elements={elements}
-            trail={trail}
-            trailRef={trailRef}
-            firstAnimationTriggered={firstAnimationTriggered}
-            setFirstAnimationTriggered={setFirstAnimationTriggered}
-            setSecondAnimationTriggered={setSecondAnimationTriggered}
-        />
-    </>);
+            <Example2
+                elements={elements}
+                trail={trail}
+                trailRef={trailRef}
+                firstAnimationTriggered={firstAnimationTriggered}
+                setFirstAnimationTriggered={setFirstAnimationTriggered}
+                setSecondAnimationTriggered={setSecondAnimationTriggered}
+            />
+        </Section>
+    );
 }

@@ -11,7 +11,7 @@ import { HTMLAttributes } from 'react';
 
 export function NewContainerBox({ children, className, ...rest }: HTMLAttributes<HTMLDivElement>) {
     return (
-        <div className={classNames("flex flex-col items-center gap-4 bg-green-500", className)} {...rest}>
+        <div className={classNames("py-4 flex flex-col items-center gap-4 bg-green-500", className)} {...rest}>
             {children}
         </div>
     );
