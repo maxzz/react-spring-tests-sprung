@@ -37,7 +37,7 @@ export function PageUseChain() {
     });
 
     return (
-        <Section label="5. useChain">
+        <Section label="5. useChain" sectionKey='chain'>
             <Example1
                 elements={elements}
                 trail={trail}

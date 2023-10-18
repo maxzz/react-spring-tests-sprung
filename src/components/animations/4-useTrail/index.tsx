@@ -13,7 +13,7 @@ import { Example2 } from './2-example';
 
 export function PageUseTrail() {
     return (
-        <Section label="4. useTrail">
+        <Section label="4. useTrail" sectionKey='trail'>
             <Example1 />
             <Example2 />
         </Section>

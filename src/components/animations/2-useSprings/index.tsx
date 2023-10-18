@@ -11,7 +11,7 @@ import { Example4 } from './4-example';
 
 export function PageUseSprings() {
     return (
-        <Section label="2. useSprings">
+        <Section label="2. useSprings" sectionKey='springs'>
             <Example1 />
             <Example2 />
             <Example3 />

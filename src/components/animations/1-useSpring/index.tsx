@@ -18,7 +18,7 @@ import { Section } from '@/components/ui';
 
 export function PageUseSpring() {
     return (
-        <Section label="1. useSpring">
+        <Section label="1. useSpring" sectionKey='spring'>
             <NewContainerBox>
                 <Example1 />
                 <Example2 />

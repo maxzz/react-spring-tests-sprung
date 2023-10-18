@@ -45,7 +45,7 @@ export function PageUseTransition() {
     });
 
     return (
-        <Section label="3. useTransition">
+        <Section label="3. useTransition" sectionKey='transition'>
             <Example1 transition={transition} setIsActive={setIsActive} />
             <Example2 transition={transition} setIsActive={setIsActive} />
         </Section>

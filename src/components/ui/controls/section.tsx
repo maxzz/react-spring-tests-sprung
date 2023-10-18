@@ -1,7 +1,9 @@
 import { HTMLAttributes, useState } from "react";
+import { useSnapshot } from "valtio";
 import { animated, useSpring } from "@react-spring/web";
 import useMesure from "react-use-measure";
 import { classNames } from "@/utils/classnames";
+import { SectionNameKey, appSettings } from "@/store/app-settings";
 
 /**
  * @param open conditional to show content or hide
@@ -38,12 +40,14 @@ export function UIIconUpDown({ open, className, ...rest }: { open: boolean; } & 
     );
 }
 
-export function Section({ label, children }: { label: string; } & HTMLAttributes<HTMLDivElement>) {
-    const [open, toggle] = useState(false);
+export function Section({ label, children, sectionKey }: { label: string; sectionKey: SectionNameKey; } & HTMLAttributes<HTMLDivElement>) {
+    //const [open, toggle] = useState(false);
+    const { sections } = useSnapshot(appSettings);
+    const open = sections[sectionKey] || false;
     return (
         <div className="mt-4 -mx-12 text-xl text-white bg-gray-700">
 
-            <button className="w-full bg-gray-700 flex items-center justify-between" onClick={() => toggle((p) => !p)}>
+            <button className="w-full bg-gray-700 flex items-center justify-between" onClick={() => appSettings.sections[sectionKey] = !open }>
                 <div className="px-4 py-4">
                     {label}
                 </div>
