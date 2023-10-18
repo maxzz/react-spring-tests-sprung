@@ -1,6 +1,6 @@
 import { useTransition, useSpringRef, useChain } from '@react-spring/web';
 import { DemoAnimatableBox, DemoAnimatableCircle } from '@/components/ui/animated';
-import { NewContainerForAnimation, NewContainerBox, NewExplanation, NewNotes, StartButton } from '@/components/ui';
+import { NewContainerForAnimation, NewContainerBox, NewNotes, StartButton } from '@/components/ui';
 import { ExampleProps } from './common';
 
 export function Example2({ trail, trailRef, elements, firstAnimationTriggered, setFirstAnimationTriggered, setSecondAnimationTriggered }: ExampleProps) {

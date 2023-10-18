@@ -1,4 +1,4 @@
-import { NewContainerForAnimation, NewContainerBox, NewHookExplanation, NewNotes, NewSection } from '@/components/ui';
+import { NewContainerBox } from '@/components/ui';
 import { Example1 } from './1-example';
 import { Example2 } from './2-example';
 import { Example3 } from './3-example';

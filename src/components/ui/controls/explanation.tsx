@@ -14,21 +14,21 @@ import { HTMLAttributes } from 'react';
 //     // margin: '0rem',
 // });
 
-export function NewExplanation({ children, className, ...rest }: HTMLAttributes<HTMLDivElement>) {
-    return (
-        <animated.div className={classNames("bg-red-500", className)} {...rest}>
-            {children}
-        </animated.div>
-    );
-}
+// export function NewExplanation({ children, className, ...rest }: HTMLAttributes<HTMLDivElement>) {
+//     return (
+//         <animated.div className={classNames("bg-red-500", className)} {...rest}>
+//             {children}
+//         </animated.div>
+//     );
+// }
 
-export function NewHookExplanation({ children, className, ...rest }: HTMLAttributes<HTMLDivElement>) {
-    return (
-        <div className={classNames("bg-red-300", className)} {...rest}>
-            {children}
-        </div>
-    );
-}
+// export function NewHookExplanation({ children, className, ...rest }: HTMLAttributes<HTMLDivElement>) {
+//     return (
+//         <div className={classNames("bg-red-300", className)} {...rest}>
+//             {children}
+//         </div>
+//     );
+// }
 
 export function NewNotes({ children, className, ...rest }: HTMLAttributes<HTMLDivElement>) {
     return (

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTrail, useSpringRef } from '@react-spring/web';
-import { NewHookExplanation, NewSection, Section } from '@/components/ui';
+import { Section } from '@/components/ui';
 import { Example1 } from './1-example';
 import { Example2 } from './2-example';
 

@@ -26,8 +26,8 @@ export function Example2({ transition, setIsActive }: ExampleProps) {
             <NewContainerForAnimation>
                 {transition(
                     (spring, item) => item &&
-                        elements.map((element) => (
-                            <DemoAnimatableBox style={spring}>
+                        elements.map((element, i) => (
+                            <DemoAnimatableBox style={spring} key={i}>
                                 <h1>{element.message}</h1>
                             </DemoAnimatableBox>
                         ))
