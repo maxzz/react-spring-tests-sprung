@@ -22,13 +22,13 @@ export function Example4() {
 
     return (<>
         <NewNotes>
-            <div className="font-bold">4. useSprings on event method</div>
-            <p>
+            <div className="font-bold">2.4. useSprings on event method</div>
+            {/* <p>
                 We'll map and render animated boxes given the length of our dataset (the
                 first argument of our useSprings hooks). Click to fire the handler
                 function. Notice everytime we click if after it will jump to the
                 beginning of the animation and immediateley run
-            </p>
+            </p> */}
         </NewNotes>
 
         <NewContainerBox>
@@ -42,7 +42,7 @@ export function Example4() {
             </NewContainerForAnimation>
 
             <StartButton onClick={fireAnimation}>
-                Click to fire animation
+                Start animation
             </StartButton>
 
         </NewContainerBox>

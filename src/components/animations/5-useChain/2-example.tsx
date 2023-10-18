@@ -24,7 +24,7 @@ export function Example2({ trail, trailRef, elements, firstAnimationTriggered, s
     return (<>
         <NewNotes>
             <div className="">
-                <div className="font-bold">2. useChain with useTransition followed by useTrail</div>
+                <div className="font-bold">5.2. useChain with useTransition followed by useTrail</div>
                 {/* <p>
                     The first animation in our useChain hook is a useTrail to mount our box.
                     That box will be able to trigger our second animation which is the same

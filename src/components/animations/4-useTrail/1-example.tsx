@@ -31,7 +31,7 @@ export function Example1() {
     return (<>
         <NewNotes>
             <div className="">
-                <div className="font-bold">1. useTrail automatically staggers springs for us</div>
+                <div className="font-bold">4.1. useTrail automatically staggers springs for us</div>
                 <p>
                 </p>
             </div>
@@ -48,9 +48,9 @@ export function Example1() {
             </NewContainerForAnimation>
 
             <StartButton onClick={() => setIsActive((state) => !state)}>
-                Click to change state
+                Change state
             </StartButton>
-            
+
         </NewContainerBox>
     </>);
 }

@@ -8,7 +8,7 @@ import { HTMLAttributes } from 'react';
 
 export function NewContainerForAnimation({ children, className, ...rest }: HTMLAttributes<HTMLDivElement>) {
     return (
-        <div className={classNames("bg-gray-500 border-violet-500 border-4 rounded flex gap-4", className)} {...rest}>
+        <div className={classNames("bg-gray-500 border-gray-300 border-2 border-dashed rounded flex gap-4", className)} {...rest}>
             {children}
         </div>
     );

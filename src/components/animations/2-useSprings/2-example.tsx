@@ -26,12 +26,12 @@ export function Example2() {
 
     return (<>
         <NewNotes>
-            <div className="font-bold">2. useSprings state method</div>
-            <p>
+            <div className="font-bold">2.2. useSprings state method</div>
+            {/* <p>
                 We'll map and render animated boxes given the length of our dataset (the
                 first argument of our useSprings hooks). Toggle the state to run the
                 animation.
-            </p>
+            </p> */}
         </NewNotes>
 
         <NewContainerBox>
@@ -45,7 +45,7 @@ export function Example2() {
             </NewContainerForAnimation>
 
             <StartButton onClick={() => setIsActive((state) => !state)}>
-                Click to change state
+                Change state
             </StartButton>
 
         </NewContainerBox>

@@ -8,7 +8,7 @@ export function Example1({ transition, setIsActive }: ExampleProps) {
     return (<>
         <NewNotes>
             <div className="">
-                <div className="font-bold">1. useTransition, mounting and unmounting a single element</div>
+                <div className="font-bold">3.1. useTransition, mounting and unmounting a single element</div>
                 <p>
                 </p>
             </div>
@@ -27,7 +27,7 @@ export function Example1({ transition, setIsActive }: ExampleProps) {
             </NewContainerForAnimation>
 
             <StartButton onClick={() => setIsActive((state) => !state)}>
-                Click to change state
+                Change state
             </StartButton>
             
         </NewContainerBox>

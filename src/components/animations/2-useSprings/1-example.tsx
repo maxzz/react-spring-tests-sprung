@@ -26,11 +26,11 @@ export function Example1() {
     return (<>
         <NewNotes>
             <div className="">
-                <div className="font-bold">1. useSpring state method</div>
-                <p>
+                <div className="font-bold">2.1. useSpring state method</div>
+                {/* <p>
                     Given the data set we'll map and render out boxs with our spring
                     attached. Trigger the spring when the state changes
-                </p>
+                </p> */}
             </div>
         </NewNotes>
 
@@ -44,7 +44,7 @@ export function Example1() {
             </NewContainerForAnimation>
 
             <StartButton onClick={() => setIsActive((state) => !state)}>
-                Click to change state
+                Change state
             </StartButton>
 
         </NewContainerBox>

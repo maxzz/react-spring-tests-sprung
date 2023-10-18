@@ -43,7 +43,7 @@ export function Section({ label, children }: { label: string; } & HTMLAttributes
     return (
         <div className="mt-4 -mx-12 text-xl text-white bg-gray-700">
 
-            <button className="w-full bg-red-500 flex items-center justify-between" onClick={() => toggle((p) => !p)}>
+            <button className="w-full bg-gray-700 flex items-center justify-between" onClick={() => toggle((p) => !p)}>
                 <div className="px-4 py-4">
                     {label}
                 </div>

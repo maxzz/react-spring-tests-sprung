@@ -16,7 +16,7 @@ export function Example1({ trail, trailRef, elements, firstAnimationTriggered, s
     return (<>
         <NewNotes>
             <div className="">
-                <div className="font-bold">1: useChain with useSpring followed by useTrail</div>
+                <div className="font-bold">5.1: useChain with useSpring followed by useTrail</div>
                 {/* <p>
                     The first animation in our useChain hook is a useSpring to fade in our
                     box. That box will be able to trigger our second animation. Notice how

@@ -11,7 +11,7 @@ import { Example2 } from './2-example';
     a ref to each, and pass those refs to useChain in an array
 </NewHookExplanation> */}
 
-// Our second animation will be a useTrail to animate 4 circles
+// Second animation will be a useTrail to animate 4 circles
 // These circles are positioned absolute, so they are stacked on top of each other
 // We need to offset each of them, so we'll declare some offset values for them to inject later
 const ofs = 70;
@@ -27,7 +27,7 @@ export function PageUseChain() {
     const [firstAnimationTriggered, setFirstAnimationTriggered] = useState(false);
     const [secondAnimationTriggered, setSecondAnimationTriggered] = useState(false);
 
-    // Our second animation will animate based on the secondAnimationTriggered variable
+    // Second animation will animate based on the secondAnimationTriggered variable
     // We'll use this trail for both example 1 and 2,
     const trailRef = useSpringRef();
     const trail = useTrail(elements.length, {

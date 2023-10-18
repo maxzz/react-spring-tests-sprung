@@ -27,7 +27,7 @@ export function Example2() {
     return (<>
         <NewNotes>
             <div className="">
-                <div className="font-bold">2. useTrail automatically staggers animations for us</div>
+                <div className="font-bold">4.2. useTrail automatically staggers animations for us</div>
                 <p>
                 </p>
             </div>
@@ -44,7 +44,7 @@ export function Example2() {
             </NewContainerForAnimation>
 
             <StartButton onClick={() => setIsActive((state) => !state)}>
-                Click to fire
+                Start animation
             </StartButton>
 
         </NewContainerBox>
