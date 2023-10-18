@@ -9,7 +9,8 @@
     "react-dom": "^18.2.0",
     "react-spring": "^9.5.5",
     "react-use-measure": "^2.1.1",
-    "tailwind-merge": "^1.14.0"
+    "tailwind-merge": "^1.14.0",
+    "valtio": "^1.11.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
